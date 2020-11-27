@@ -20,10 +20,10 @@ use App\Http\Controllers\VulkanacumController;
 | contains the "web" middleware group. Now create something great!
 |updateForm
 */
-//SPASARKUM
+
 
 Route::group(["middleware" => "auth"], function(){
-
+//SPASARKUM
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('spasarkum', [SpasarkumController::class, 'allData'])->name('spasarkum');
     Route::get('addForm', [SpasarkumController::class, 'addForm'])->name('addForm');
@@ -32,6 +32,16 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('update/{id}', [SpasarkumController::class, 'update'])->name('update');
     Route::post('update/{id}', [SpasarkumController::class, 'updateForm'])->name('updateForm');
     Route::get('serviceMap/{id}', [SpasarkumController::class, 'serviceMap'])->name('serviceMap');
+//SPASARKUM//NORUTYUN
+    Route::get('addnews/{id}', [SpasarkumController::class, 'addnews'])->name('addnews');
+    Route::post('submitNews', [SpasarkumController::class, 'submitNews'])->name('submitNews');
+    Route::get('deleteNews/{id}', [SpasarkumController::class, 'deleteNews'])->name('deleteNews');
+    Route::post('updateNews/{id}', [SpasarkumController::class, 'updateNews'])->name('updateNews');
+//SPASARKUM//XORHURD
+    Route::get('addAdvice/{id}', [SpasarkumController::class, 'addAdvice'])->name('addAdvice');
+    Route::post('submitAdvice', [SpasarkumController::class, 'submitAdvice'])->name('submitAdvice');
+    Route::get('deleteAdvice/{id}', [SpasarkumController::class, 'deleteAdvice'])->name('deleteAdvice');
+    Route::post('updateAdvice/{id}', [SpasarkumController::class, 'updateAdvice'])->name('updateAdvice');
 //PARTNER
     Route::get('partner', [PartnerController::class, 'index'])->name('partner');
     Route::get('updatePartner/{id}', [PartnerController::class, 'updatePartner'])->name('updatePartner');

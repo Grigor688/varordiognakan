@@ -10,6 +10,8 @@ class PartnerController extends Controller
     public function index(){
 
         $spasarkum = Spasarkum::select('*')->where('partner', '1')->get();
+
+//        return json_encode($spasarkum);
         return view('partner.partner', [
             'data' => $spasarkum
         ]);

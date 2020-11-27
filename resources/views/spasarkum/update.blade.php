@@ -83,9 +83,74 @@
                             <label for="orientation">Ուղղվածություն</label>
                             <textarea  name="orientation" class="form-control" id="orientation" aria-describedby="emailHelp">{{$data->orientation}}</textarea>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </form>
+
+            <div class="form-group">
+                    <h4 class="formDiv">Նորություններ</h4>
+                <div class="container formDiv">
+                    <div class="row">
+                        @foreach($data->newses as $news)
+                            <div class="col-md-4 divNews">
+                                <form action="{{route('updateNews',$news->id)}}" method="post">
+                                    @csrf
+                                        <div class="thumbnail">
+                                            <div style="width: 336px;height: 205px;">
+                                                <img style="width: 100%;height: 100%" src="/uploads/news/{{$news->image}}">
+                                            </div>
+
+                                            <div class="caption">
+                                                <textarea name="newses" class="form-control" id="newses" aria-describedby="emailHelp">{{$news->newses}}</textarea>
+                                            </div>
+                                        </div>
+                                <button type="submit" class='btn btn-link btn-warning edit a_edit'>Popoxel</button>
+                                <a href='{{route('deleteNews', $news->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
+                                </form>
+                            </div>
+                            <br>
+                        @endforeach
+                    </div>
+                    <br>
+                    <a href="{{route('addnews',$data->id)}}" class="nav-link">
+                        <button id="send-mail-list" class="form-control btn-primary">Ավելացնել</button>
+                    </a>
+                </div>
+
+            </div>
+
+    <div class="form-group">
+        <h4 class="formDiv">Խորհուրդներ</h4>
+        <div class="container formDiv">
+            <div class="row">
+                @foreach($data->advices as $advice)
+                        <div class="col-md-4 divNews">
+                            <form action="{{route('updateAdvice',$advice->id)}}" method="post">
+                                @csrf
+                            <div class="thumbnail">
+                                <div style="width: 336px;height: 205px;">
+                                    <img style="width: 100%;height: 100%" src="/uploads/advice/{{$advice->image}}">
+                                </div>
+                                <div class="caption">
+                                    <textarea name="advice" class="form-control" id="advice" aria-describedby="emailHelp">{{$advice->advice}}</textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class='btn btn-link btn-warning edit a_edit'>Popoxel</button>
+                            <a href='{{route('deleteAdvice',$advice->id )}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
+                            </form>
+                        </div>
+                @endforeach
+            </div>
+            <br>
+            <a href="{{route('addAdvice',$data->id)}}" class="nav-link">
+                <button id="send-mail-list" class="form-control btn-primary">Ավելացնել</button>
+            </a>
+        </div>
+
+    </div>
+
+
 @endsection

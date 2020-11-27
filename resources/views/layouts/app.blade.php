@@ -196,31 +196,31 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="{{route('spasarkum')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon fas fa-th"></i>
                                     <p>Սպասարկման կետ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('partner')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon fas fa-chart-pie"></i>
                                     <p>Գործընկեր</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('ogtater')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon fas fa-columns"></i>
                                     <p>Օգտատեր</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('sos')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon far fa-circle text-info"></i>
                                     <p>SOS</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('appa')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon far fa-circle text-warning"></i>
                                     <p>ԱՊՊԱ</p>
                                 </a>
                             </li>

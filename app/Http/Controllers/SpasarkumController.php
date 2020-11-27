@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Spasarkum;
+use App\Models\Advice;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class SpasarkumController extends Controller
@@ -53,9 +55,93 @@ class SpasarkumController extends Controller
     }
 
     public function update($id){
-        $spasarkum = new Spasarkum();
-        return view('spasarkum.update', ['data'=>$spasarkum->find($id)]);
+
+        $data = Spasarkum::with(['advices', 'newses'])->where(['id' => $id])->first();
+        return view('spasarkum.update', ['data' => $data]);
     }
+
+    //SPASARKUM//NORUTYUN
+
+    public function addnews(Request $request){
+        return view('spasarkum.addNews', [
+            'spasarkum_id' => $request->id
+        ]);
+    }
+    public function submitNews(Request $request){
+        $news = new News();
+        $news->newses = $request->input('newses');
+        $news->spasarkums_id = $request->input('spasarkum_id');
+
+        if ($request->hasfile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/news/', $filename);
+            $news->image = $filename;
+        }else{
+            return $request;
+            $news->image = "";
+        }
+
+        $news->save();
+        return redirect()->back()->with('success','Հաջողությամբ ավելացվել է');
+    }
+
+    public function deleteNews($id){
+        News::find($id)->delete();
+        return redirect()->route('spasarkum')->with('deleted','Հաջողությամբ ջնջվել է');
+    }
+
+    public function updateNews($id, Request $req){
+        $news = News::find($id);
+        $news->newses = $req->input('newses');
+        $news->save();
+        return redirect()->route('spasarkum',$id)->with('updated','Հաջողությամբ փոփոխվել է');
+    }
+
+    //SPASARKUM//XORHURD
+
+    public function addAdvice(Request $request){
+        return view('spasarkum.addAdvice', [
+            'spasarkum_id' => $request->id
+        ]);
+    }
+
+    public function submitAdvice(Request $request){
+        $advice = new Advice();
+        $advice->advice = $request->input('advice');
+        $advice->spasarkums_id = $request->input('spasarkum_id');
+
+        if ($request->hasfile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/advice/', $filename);
+            $advice->image = $filename;
+        }else{
+            return $request;
+            $advice->image = "";
+        }
+
+        $advice->save();
+        return redirect()->back()->with('success','Հաջողությամբ ավելացվել է');
+    }
+
+
+
+
+    public function deleteAdvice($id){
+        Advice::find($id)->delete();
+        return redirect()->route('spasarkum')->with('deleted','Հաջողությամբ ջնջվել է');
+    }
+
+    public function updateAdvice($id, Request $req){
+        $advice = Advice::find($id);
+        $advice->advice = $req->input('advice');
+        $advice->save();
+        return redirect()->route('spasarkum',$id)->with('updated','Հաջողությամբ փոփոխվել է');
+    }
+    //SPASARKUM//XORHURD
 
     public function updateForm($id, Request $req){
         $spasarkum = Spasarkum::find($id);

@@ -18,4 +18,11 @@ class Spasarkum extends Model
 
         return !empty($statuses[$id]) ? $statuses[$id] : null;
     }
+    public function advices(){
+        return $this->hasMany('App\Models\Advice', 'spasarkums_id', 'id');
+    }
+
+    public function newses(){
+        return $this->hasMany('App\Models\News', 'spasarkums_id', 'id');
+    }
 }
