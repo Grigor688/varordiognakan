@@ -12,8 +12,12 @@
                 <div class="col-md-12">
                     <div class="col-md-6 formDiv">
                         <div class="form-group">
-                            <label for="news">Նորություն</label>
-                            <input type="text" name="newses" class="form-control" id="news" aria-describedby="emailHelp" placeholder="Գրեք Նորություն">
+                            <label for="title">Վերնագիր</label>
+                            <br>
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Գրեք վերնագիր">
+                            <br>
+                            <label for="news">Տեքստ</label>
+                            <textarea name="newses" class="form-control" id="news" aria-describedby="emailHelp" placeholder="Գրեք Նորություն"></textarea>
                             <input type="hidden" name="spasarkum_id"  value="{{ $spasarkum_id }}">
                         </div>
                         <div class="form-group">

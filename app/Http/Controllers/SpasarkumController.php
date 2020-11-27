@@ -71,6 +71,7 @@ class SpasarkumController extends Controller
         $news = new News();
         $news->newses = $request->input('newses');
         $news->spasarkums_id = $request->input('spasarkum_id');
+        $news->title = $request->input('title');
 
         if ($request->hasfile('image')){
             $file = $request->file('image');
@@ -95,6 +96,7 @@ class SpasarkumController extends Controller
     public function updateNews($id, Request $req){
         $news = News::find($id);
         $news->newses = $req->input('newses');
+        $news->title = $req->input('title');
         $news->save();
         return redirect()->route('spasarkum',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }
@@ -111,6 +113,7 @@ class SpasarkumController extends Controller
         $advice = new Advice();
         $advice->advice = $request->input('advice');
         $advice->spasarkums_id = $request->input('spasarkum_id');
+        $advice->title = $request->input('title');
 
         if ($request->hasfile('image')){
             $file = $request->file('image');
@@ -128,8 +131,6 @@ class SpasarkumController extends Controller
     }
 
 
-
-
     public function deleteAdvice($id){
         Advice::find($id)->delete();
         return redirect()->route('spasarkum')->with('deleted','Հաջողությամբ ջնջվել է');
@@ -138,6 +139,7 @@ class SpasarkumController extends Controller
     public function updateAdvice($id, Request $req){
         $advice = Advice::find($id);
         $advice->advice = $req->input('advice');
+        $advice->title = $req->input('title');
         $advice->save();
         return redirect()->route('spasarkum',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }

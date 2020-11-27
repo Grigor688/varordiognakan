@@ -8,6 +8,14 @@ use App\Http\Controllers\OgtaterController;
 use App\Http\Controllers\SosController;
 use App\Http\Controllers\EvakuatorController;
 use App\Http\Controllers\VulkanacumController;
+use App\Http\Controllers\SpasarkumJsonController;
+use App\Http\Controllers\VulkanacumJsonController;
+use App\Http\Controllers\EvakuatorJsonController;
+use App\Http\Controllers\OgtaterJsonController;
+use App\Http\Controllers\AppaJsonController;
+use App\Http\Controllers\NewsJsonController;
+use App\Http\Controllers\AdviceJsonController;
+
 
 
 /*
@@ -79,6 +87,14 @@ Route::group(["middleware" => "auth"], function(){
     Route::post('updateAppaForm/{id}', [HomeController::class, 'updateAppaForm'])->name('updateAppaForm');
 
 });
+//API Linker
+    Route::get('serviceJson', [SpasarkumJsonController::class, 'index']);
+    Route::get('vulcanizationJson', [VulkanacumJsonController::class, 'index']);
+    Route::get('EvacuatorJson', [EvakuatorJsonController::class, 'index']);
+    Route::get('UserJson', [OgtaterJsonController::class, 'index']);
+    Route::get('AppaJson', [AppaJsonController::class, 'index']);
+    Route::get('NewsJson', [NewsJsonController::class, 'index']);
+    Route::get('AdviceJson', [AdviceJsonController::class, 'index']);
 
 Auth::routes();
 

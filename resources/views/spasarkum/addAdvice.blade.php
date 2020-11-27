@@ -12,7 +12,11 @@
                 <div class="col-md-12">
                     <div class="col-md-6 formDiv">
                         <div class="form-group">
-                            <label for="advice">Խորհուրդ</label>
+                            <label for="title">Վերնագիր</label>
+                            <br>
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Գրեք վերնագիր">
+                            <br>
+                            <label for="advice">Տեքստ</label>
                             <input type="text" name="advice" class="form-control" id="advice" aria-describedby="emailHelp" placeholder="Գրեք խորհուրդ">
                             <input type="hidden" name="spasarkum_id"  value="{{ $spasarkum_id }}">
                         </div>

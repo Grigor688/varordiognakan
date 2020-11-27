@@ -104,10 +104,11 @@
                                             </div>
 
                                             <div class="caption">
+                                                <input type="text" name="title" class="form-control" value="{{$news->title}}">
                                                 <textarea name="newses" class="form-control" id="newses" aria-describedby="emailHelp">{{$news->newses}}</textarea>
                                             </div>
                                         </div>
-                                <button type="submit" class='btn btn-link btn-warning edit a_edit'>Popoxel</button>
+                                <button type="submit" style="margin-top: 4px" class='btn btn-link btn-warning edit a_edit'>Փոփոխել</button>
                                 <a href='{{route('deleteNews', $news->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                                 </form>
                             </div>
@@ -135,10 +136,11 @@
                                     <img style="width: 100%;height: 100%" src="/uploads/advice/{{$advice->image}}">
                                 </div>
                                 <div class="caption">
+                                    <input type="text" name="title" class="form-control" value="{{$advice->title}}">
                                     <textarea name="advice" class="form-control" id="advice" aria-describedby="emailHelp">{{$advice->advice}}</textarea>
                                 </div>
                             </div>
-                            <button type="submit" class='btn btn-link btn-warning edit a_edit'>Popoxel</button>
+                            <button type="submit" style="margin-top: 4px" class='btn btn-link btn-warning edit a_edit'>Փոփոխել</button>
                             <a href='{{route('deleteAdvice',$advice->id )}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                             </form>
                         </div>
