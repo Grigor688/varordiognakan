@@ -18,7 +18,6 @@
                             <br>
                             <label for="advice">Տեքստ</label>
                             <input type="text" name="advice" class="form-control" id="advice" aria-describedby="emailHelp" placeholder="Գրեք խորհուրդ">
-                            <input type="hidden" name="spasarkum_id"  value="{{ $spasarkum_id }}">
                         </div>
                         <div class="form-group">
                             <label for="file">Նկար</label>
