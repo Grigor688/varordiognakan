@@ -15,6 +15,7 @@ use App\Http\Controllers\OgtaterJsonController;
 use App\Http\Controllers\AppaJsonController;
 use App\Http\Controllers\NewsJsonController;
 use App\Http\Controllers\AdviceJsonController;
+use App\Http\Controllers\OrinetationController;
 
 
 
@@ -40,20 +41,11 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('update/{id}', [SpasarkumController::class, 'update'])->name('update');
     Route::post('update/{id}', [SpasarkumController::class, 'updateForm'])->name('updateForm');
     Route::get('serviceMap/{id}', [SpasarkumController::class, 'serviceMap'])->name('serviceMap');
-//SPASARKUM//NORUTYUN
-    Route::get('addnews/{id}', [SpasarkumController::class, 'addnews'])->name('addnews');
-    Route::post('submitNews', [SpasarkumController::class, 'submitNews'])->name('submitNews');
-    Route::get('deleteNews/{id}', [SpasarkumController::class, 'deleteNews'])->name('deleteNews');
-    Route::post('updateNews/{id}', [SpasarkumController::class, 'updateNews'])->name('updateNews');
-//SPASARKUM//XORHURD
-    Route::get('addAdvice/{id}', [SpasarkumController::class, 'addAdvice'])->name('addAdvice');
-    Route::post('submitAdvice', [SpasarkumController::class, 'submitAdvice'])->name('submitAdvice');
-    Route::get('deleteAdvice/{id}', [SpasarkumController::class, 'deleteAdvice'])->name('deleteAdvice');
-    Route::post('updateAdvice/{id}', [SpasarkumController::class, 'updateAdvice'])->name('updateAdvice');
 //PARTNER
     Route::get('partner', [PartnerController::class, 'index'])->name('partner');
     Route::get('updatePartner/{id}', [PartnerController::class, 'updatePartner'])->name('updatePartner');
     Route::post('updatePartner/{id}', [PartnerController::class, 'updatePartnerForm'])->name('updatePartnerForm');
+    Route::get('deletePartner/{id}', [PartnerController::class, 'deletePartner'])->name('deletePartner');
 //OGTATER
     Route::get('ogtater', [OgtaterController::class, 'index'])->name('ogtater');
     Route::get('deleteOgtater/{id}',[OgtaterController::class, 'deleteUser'])->name('delete22');
@@ -85,6 +77,18 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('deleteAppa/{id}', [HomeController::class, 'deleteAppa'])->name('deleteAppa');
     Route::get('updateAppa/{id}', [HomeController::class, 'updateAppa'])->name('updateAppa');
     Route::post('updateAppaForm/{id}', [HomeController::class, 'updateAppaForm'])->name('updateAppaForm');
+//NORUTYUN
+    Route::get('news', [NewsJsonController::class, 'news'])->name('news');
+    Route::post('updateNews/{id}', [NewsJsonController::class, 'updateNews'])->name('updateNews');
+    Route::get('addnews', [NewsJsonController::class, 'addnews'])->name('addnews');
+    Route::post('submitNews', [NewsJsonController::class, 'submitNews'])->name('submitNews');
+    Route::get('deleteNews/{id}', [NewsJsonController::class, 'deleteNews'])->name('deleteNews');
+//XORHURD
+    Route::get('advice',[AdviceJsonController::class, 'advice'])->name('advice');
+    Route::post('submitAdvice', [AdviceJsonController::class, 'submitAdvice'])->name('submitAdvice');
+    Route::get('addAdvice', [AdviceJsonController::class, 'addAdvice'])->name('addAdvice');
+    Route::get('deleteAdvice/{id}', [AdviceJsonController::class, 'deleteAdvice'])->name('deleteAdvice');
+    Route::post('updateAdvice/{id}', [AdviceJsonController::class, 'updateAdvice'])->name('updateAdvice');
 
 });
 //API Linker

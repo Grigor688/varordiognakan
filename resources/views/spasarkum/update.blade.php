@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <form action="{{route('updateForm',$data->id)}}" method="post">
+    <form action="{{route('updateForm',$data->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="container">
             <div class="row">
@@ -13,20 +13,25 @@
                         <div class="form-group">
                             <label for="name">Մասնագիտացում</label>
                             <select name="name" id="name" class="form-control">
+                                <option>Էվակուատոր</option>
+                                <option>Շարժական Վուլկանացում</option>
                                 <option>Ավտոտեխսպասարկման կետ</option>
-                                <option>Էլեկտրիկ/դիագնոստիկա</option>
-                                <option>Մատորիստ</option>
                                 <option>Վուլկանացում</option>
-                                <option>Ընթացագործ</option>
-                                <option>Գազավիկներ</option>
-                                <option>Թիթեղագործ/ներկարար</option>
-                                <option>(Լվա ինքդ)/ լվացման կետ</option>
+                                <option>Ավտոլվացում</option>
+                                <option>Լվա ինքդ</option>
+                                <option>Էլեկտրիկ</option>
+                                <option>Մատորիստ</option>
+                                <option>Խադավիկ</option>
+                                <option>Դզող-փչող</option>
+                                <option>Գազավիկ</option>
+                                <option>Ապակիների մգեցում</option>
+                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
                                 <option>Մեքենաների քանդման կետեր</option>
-                                <option>Մեքենայի փայլեցում/ապակիների մգեցում</option>
                                 <option>Սրահի վերանորոգում/քիմ մաքրում</option>
                                 <option>Մեքենայի պլաստմասե իրերի վերանորգում</option>
                                 <option>Ռադիատորի վերանորոգում</option>
-                                <option>Յուղման կետ/կոնդիցիոների լիցքավորում</option>
+                                <option>Կոնդիցիոների լիցքավորում</option>
+                                <option>Յուղման կետ</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -72,87 +77,41 @@
                     </div>
                     <div class="col-md-6 formDiv design">
                         <div class="form-group">
-                            <label for="work_day_time">Աշխատանքային օրեր/ժամեր</label>
-                            <input type="text" name="work_day_time" class="form-control" id="work_day_time" aria-describedby="emailHelp" value="{{$data->work_day_time}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="special_offer">Հատուկ առաջարկ</label>
-                            <textarea  name="special_offer" class="form-control" id="special_offer" aria-describedby="emailHelp">{{$data->special_offer}}</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="orientation">Ուղղվածություն</label>
-                            <textarea  name="orientation" class="form-control" id="orientation" aria-describedby="emailHelp">{{$data->orientation}}</textarea>
+                            <label for="work_day_from">Աշխատանքային օրեր սկսած</label>
+                            <input type="datetime-local" name="work_day_from" class="form-control" id="work_day_from" aria-describedby="emailHelp" value="{{$data->work_day_from}}">
                         </div>
 
+                        <div class="form-group">
+                            <label for="work_day_to">Աշխատանքային օրեր մինչև</label>
+                            <input type="datetime-local" name="work_day_to" class="form-control" id="work_day_to" aria-describedby="emailHelp" value="{{$data->work_day_to}}">
+                        </div>
+
+                        <div class="form-group">
+                            <h5>Հատուկ առաջարկ</h5>
+                            <label style="color: antiquewhite">Հատուկ առաջարկի սկիզբ</label>
+                            <input type="datetime-local" class="form-control" name="special_offer_time_from" value="{{$data->special_offer_time_from}}">
+                            <br>
+                            <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
+                            <br>
+                            <label style="color: antiquewhite">Հատուկ առաջարկի ավարտ</label>
+                            <input type="datetime-local" class="form-control" name="special_offer_time_to" value="{{$data->special_offer_time_to}}">
+                        </div>
+                        <div class="thumbnail">
+                            <label>Ուղղվածություն</label>
+                            <div style="width: 249px;height: 205px;">
+                                <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$data->image}}">
+                            </div>
+                            <div class="caption">
+                                <input type="file" name="image" class="form-control">
+                                <br>
+                                <input type="text" name="title_orientation" class="form-control" value="{{$data->title_orientation}}">
+                                <br>
+                                <textarea  name="orientation" class="form-control" id="orientation" aria-describedby="emailHelp">{{$data->orientation}}</textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-
-            <div class="form-group">
-                    <h4 class="formDiv">Նորություններ</h4>
-                <div class="container formDiv">
-                    <div class="row">
-                        @foreach($data->newses as $news)
-                            <div class="col-md-4 divNews">
-                                <form action="{{route('updateNews',$news->id)}}" method="post">
-                                    @csrf
-                                        <div class="thumbnail">
-                                            <div style="width: 336px;height: 205px;">
-                                                <img style="width: 100%;height: 100%" src="/uploads/news/{{$news->image}}">
-                                            </div>
-
-                                            <div class="caption">
-                                                <input type="text" name="title" class="form-control" value="{{$news->title}}">
-                                                <textarea name="newses" class="form-control" id="newses" aria-describedby="emailHelp">{{$news->newses}}</textarea>
-                                            </div>
-                                        </div>
-                                <button type="submit" style="margin-top: 4px" class='btn btn-link btn-warning edit a_edit'>Փոփոխել</button>
-                                <a href='{{route('deleteNews', $news->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
-                                </form>
-                            </div>
-                            <br>
-                        @endforeach
-                    </div>
-                    <br>
-                    <a href="{{route('addnews',$data->id)}}" class="nav-link">
-                        <button id="send-mail-list" class="form-control btn-primary">Ավելացնել</button>
-                    </a>
-                </div>
-
-            </div>
-
-    <div class="form-group">
-        <h4 class="formDiv">Խորհուրդներ</h4>
-        <div class="container formDiv">
-            <div class="row">
-                @foreach($data->advices as $advice)
-                        <div class="col-md-4 divNews">
-                            <form action="{{route('updateAdvice',$advice->id)}}" method="post">
-                                @csrf
-                            <div class="thumbnail">
-                                <div style="width: 336px;height: 205px;">
-                                    <img style="width: 100%;height: 100%" src="/uploads/advice/{{$advice->image}}">
-                                </div>
-                                <div class="caption">
-                                    <input type="text" name="title" class="form-control" value="{{$advice->title}}">
-                                    <textarea name="advice" class="form-control" id="advice" aria-describedby="emailHelp">{{$advice->advice}}</textarea>
-                                </div>
-                            </div>
-                            <button type="submit" style="margin-top: 4px" class='btn btn-link btn-warning edit a_edit'>Փոփոխել</button>
-                            <a href='{{route('deleteAdvice',$advice->id )}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
-                            </form>
-                        </div>
-                @endforeach
-            </div>
-            <br>
-            <a href="{{route('addAdvice',$data->id)}}" class="nav-link">
-                <button id="send-mail-list" class="form-control btn-primary">Ավելացնել</button>
-            </a>
-        </div>
-
-    </div>
-
-
 @endsection

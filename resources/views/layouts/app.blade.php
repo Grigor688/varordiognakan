@@ -224,6 +224,18 @@
                                     <p>ԱՊՊԱ</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('news')}}" class="nav-link">
+                                    <i class="nav-icon far fa-circle text-danger"></i>
+                                    <p>Նորություններ</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('advice')}}" class="nav-link">
+                                    <i class="nav-icon far fa-circle text-fuchsia"></i>
+                                    <p>Խորհուրդներ</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

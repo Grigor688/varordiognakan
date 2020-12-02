@@ -18,8 +18,8 @@ class PartnerController extends Controller
     }
 
     public function updatePartner($id){
-        $spasarkum = new Spasarkum();
-        return view('partner.updatePartner', ['data'=>$spasarkum->find($id)]);
+        $data = Spasarkum::find($id);
+        return view('spasarkum.update', ['data' => $data]);
     }
 
     public function updatePartnerForm($id, Request $req){
@@ -41,6 +41,11 @@ class PartnerController extends Controller
 
         $spasarkum->save();
         return redirect()->route('partner',$id)->with('updated','Հաջողությամբ փոփոխվել է');
+    }
+
+    public function deletePartner($id){
+        Spasarkum::find($id)->delete();
+        return redirect()->route('partner')->with('deleted','Հաջողությամբ ջնջվել է');
     }
 
 

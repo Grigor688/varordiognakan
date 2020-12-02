@@ -18,7 +18,6 @@
                             <br>
                             <label for="news">Տեքստ</label>
                             <textarea name="newses" class="form-control" id="news" aria-describedby="emailHelp" placeholder="Գրեք Նորություն"></textarea>
-                            <input type="hidden" name="spasarkum_id"  value="{{ $spasarkum_id }}">
                         </div>
                         <div class="form-group">
                             <label for="file">Նկար</label>

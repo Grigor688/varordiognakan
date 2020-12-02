@@ -16,7 +16,7 @@
             {{session('success')}}
         </div>
     @endif
-    <form action="{{route('submit')}}" method="post">
+    <form action="{{route('submit')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="container">
             <div class="row">
@@ -29,20 +29,25 @@
                         <div class="form-group">
                             <label for="name">Մասնագիտացում</label>
                             <select name="name" id="name" class="form-control">
+                                <option>Էվակուատոր</option>
+                                <option>Շարժական Վուլկանացում</option>
                                 <option>Ավտոտեխսպասարկման կետ</option>
-                                <option>Էլեկտրիկ/դիագնոստիկա</option>
-                                <option>Մատորիստ</option>
                                 <option>Վուլկանացում</option>
-                                <option>Ընթացագործ</option>
-                                <option>Գազավիկներ</option>
-                                <option>Թիթեղագործ/ներկարար</option>
-                                <option>(Լվա ինքդ)/ լվացման կետ</option>
+                                <option>Ավտոլվացում</option>
+                                <option>Լվա ինքդ</option>
+                                <option>Էլեկտրիկ</option>
+                                <option>Մատորիստ</option>
+                                <option>Խադավիկ</option>
+                                <option>Դզող-փչող</option>
+                                <option>Գազավիկ</option>
+                                <option>Ապակիների մգեցում</option>
+                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
                                 <option>Մեքենաների քանդման կետեր</option>
-                                <option>Մեքենայի փայլեցում/ապակիների մգեցում</option>
                                 <option>Սրահի վերանորոգում/քիմ մաքրում</option>
                                 <option>Մեքենայի պլաստմասե իրերի վերանորգում</option>
                                 <option>Ռադիատորի վերանորոգում</option>
-                                <option>Յուղման կետ/կոնդիցիոների լիցքավորում</option>
+                                <option>Կոնդիցիոների լիցքավորում</option>
+                                <option>Յուղման կետ</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -90,16 +95,33 @@
                     </div>
                     <div class="col-md-6 formDiv design">
                         <div class="form-group">
-                            <label for="work_day_time">Աշխատանքային օրեր/ժամեր</label>
-                            <input type="text"  name="work_day_time" class="form-control changeInput" id="work_day_time" aria-describedby="emailHelp" placeholder="Հետևյալ տարբերակով\ Երկ․-Ուրբ․ 9:00-19:00">
+                            <label for="work_day_from">Աշխատանքային օրեր սկսած</label>
+                            <input type="datetime-local" name="work_day_from" class="form-control" id="work_day_from" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="work_day_to">Աշխատանքային օրեր մինչև</label>
+                            <input type="datetime-local" name="work_day_to" class="form-control" id="work_day_to" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group">
-                            <label for="special_offer">Հատուկ առաջարկ</label>
+                            <h5>Հատուկ առաջարկ</h5>
+                            <label style="color: antiquewhite">Հատուկ առաջարկի սկիզբ</label>
+                            <input type="datetime-local" class="form-control" name="special_offer_time_from">
+                            <br>
                             <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
+                            <br>
+                            <label style="color: antiquewhite">Հատուկ առաջարկի ավարտ</label>
+                            <input type="datetime-local" class="form-control" name="special_offer_time_to">
                         </div>
-                        <div class="form-group">
-                            <label for="orientation">Ուղղվածություն</label>
-                            <textarea  name="orientation" class="form-control changeInput" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք ուղղվածությունը"></textarea>
+                        <div class="thumbnail">
+                            <label>Ուղղվածություն</label>
+                            <div class="caption">
+                                <input type="file" name="image" class="form-control">
+                                <br>
+                                <input type="text" name="title_orientation" class="form-control" placeholder="Գրեք ուղղվածության վերնագիրը">
+                                <br>
+                                <textarea  name="orientation" class="form-control" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք Ուղղվածությունը"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
