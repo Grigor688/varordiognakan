@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="24d9d8c8-631c-42e0-a8f3-569fa81075cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdviceJsonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdviceJsonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsJsonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsJsonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SpasarkumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SpasarkumController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Advice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Advice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Spasarkum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Spasarkum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner/partner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner/partner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/addAdvice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/advice/addAdvice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/addNews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/addNews.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spasarkum/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,19 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="-17">
               <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
+            <state relative-caret-position="87">
               <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
               <folding>
                 <element signature="e#6441#6468#0#HTML" expanded="true" />
@@ -82,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/update.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="92" />
+              <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="92" />
               <folding>
                 <element signature="e#5981#6009#0#HTML" expanded="true" />
                 <element signature="e#6481#6508#0#HTML" expanded="true" />
@@ -464,12 +449,12 @@
       <workItem from="1606461733530" duration="14621000" />
       <workItem from="1606559570795" duration="1937000" />
       <workItem from="1606806257860" duration="19298000" />
-      <workItem from="1606893771804" duration="15107000" />
+      <workItem from="1606893771804" duration="15619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305753000" />
+    <option name="totallyTimeSpent" value="306265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -481,7 +466,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,7 +484,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.60392797" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.60392797" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -849,17 +835,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/update.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="92" />
+          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="92" />
           <folding>
             <element signature="e#5981#6009#0#HTML" expanded="true" />
             <element signature="e#6481#6508#0#HTML" expanded="true" />
@@ -869,12 +848,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="87">
           <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
           <folding>
             <element signature="e#6441#6468#0#HTML" expanded="true" />
             <element signature="e#6898#6925#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
         </state>
       </provider>
     </entry>

@@ -37,7 +37,6 @@
                                     <th  data-sortable="true">Հասցե</th>
                                     <th  data-sortable="true">Թվային հասցե</th>
                                     <th  data-sortable="true">Գործընկեր</th>
-                                    <th  data-sortable="true">Հատուկ առաջարկ</th>
                                     <th  data-sortable="true">Առաջարկի սկիզբ</th>
                                     <th  data-sortable="true">Առաջարկի ավարտ</th>
                                     <th  data-sortable="true">Հատուկ առաջարկ</th>
@@ -64,9 +63,9 @@
                                     <td scope="col">{{$element->adress}}</td>
                                     <td scope="col">{{$element->number_adress}}</td>
                                     <td scope="col">{{$element->getStatus($element->partner)}}</td>
-                                    <td scope="col">{{$element->special_offer}}</td>
                                     <td scope="col">{{$element->special_offer_time_from}}</td>
                                     <td scope="col">{{$element->special_offer_time_to}}</td>
+                                    <td scope="col">{{$element->special_offer}}</td>
                                     <td scope="col">{{$element->orientation}}</td>
                                     <td scope="col">{{$element->lat}}</td>
                                     <td scope="col">{{$element->lng}}</td>
