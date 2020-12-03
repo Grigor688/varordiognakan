@@ -18,7 +18,7 @@
                                     <textarea name="advice" class="form-control" id="advice" aria-describedby="emailHelp">{{$advice->advice}}</textarea>
                                 </div>
                             </div>
-                            <button type="submit" style="margin-top: 4px" class='btn btn-link btn-warning edit a_edit'>Փոփոխել</button>
+                            <button type="submit" style="margin-top: 4px;color: white" class='btn btn-link btn-primary edit a_edit'>Փոփոխել</button>
                             <a href='{{route('deleteAdvice',$advice->id )}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                         </form>
                     </div>

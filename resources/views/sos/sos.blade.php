@@ -43,7 +43,7 @@
                                     <tr>
                                         <th scope="col">{{$element->id}}</th>
                                         <td class='text-right'>
-                                            <a href='{{route('google', $element->id)}}' class='btn btn-link btn-warning edit a_edit'><i class='fa fa-edit'></i></a>
+                                            <a href='{{route('google', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white" class='fa fa-edit'></i></a>
                                             <a href='#' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                                         </td>
                                         <td scope="col">{{$element->firstname}}</td>

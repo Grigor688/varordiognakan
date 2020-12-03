@@ -36,7 +36,7 @@
                                         <td scope="col">{{$element->name}}</td>
                                         <td scope="col">{{$element->phone}}</td>
                                         <td class='text-right'>
-                                            <a href='{{route('updateAppa', $element->id)}}' class='btn btn-link btn-warning edit a_edit'><i class='fa fa-edit'></i></a>
+                                            <a href='{{route('updateAppa', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white" class='fa fa-edit'></i></a>
                                             <a href='{{route('deleteAppa', $element->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                                         </td>
                                     </tr>

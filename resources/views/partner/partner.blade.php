@@ -57,7 +57,7 @@
                                         <td scope="col">{{$element->lat}}</td>
                                         <td scope="col">{{$element->lng}}</td>
                                         <td class='text-right'>
-                                            <a href='{{route('updatePartner', $element->id)}}' class='btn btn-link btn-warning edit a_edit'><i class='fa fa-edit'></i></a>
+                                            <a href='{{route('updatePartner', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white;" class='fa fa-edit'></i></a>
                                             <a href='{{route('deletePartner', $element->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                                         </td>
                                     </tr>

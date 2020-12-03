@@ -57,7 +57,7 @@
 
                         <div class="form-group">
                             <label for="phone_number">Հեռախոսահամար</label>
-                            <input type="text" name="phone_number" class="form-control" id="phone_number" aria-describedby="emailHelp" placeholder="Գրեք հեռախոսահամարը">
+                            <input type="text" name="phone_number" class="form-control" id="phone_number" aria-describedby="emailHelp" value="+374">
                         </div>
                         <div class="form-group">
                             <label for="email">Էլ․փոստ</label>
@@ -73,14 +73,14 @@
                         </div>
                         <div class="form-group">
                             <label for="number_adress">Թվային հասցե</label>
-                            <input type="text" maxlength="4" name="number_adress" class="form-control" id="number_adress" aria-describedby="emailHelp" placeholder="Գրեք թվային հասցեն">
+                            <input type="text" minlength="4" maxlength="4" name="number_adress" class="form-control" id="number_adress" aria-describedby="emailHelp" placeholder="Գրեք թվային հասցեն">
                         </div>
                         <div class="form-group">
-                            <label for="lat">Լատիտուդե</label>
+                            <label for="lat">Լատիտուդ</label>
                             <input type="text"  name="lat" class="form-control" id="lat" aria-describedby="emailHelp" placeholder="Գրեք լատիտուդե հասցեն">
                         </div>
                         <div class="form-group">
-                            <label for="lng">Լոնգիտուդե</label>
+                            <label for="lng">Լոնգիտուդ</label>
                             <input type="text" name="lng" class="form-control" id="lng" aria-describedby="emailHelp" placeholder="Գրեք լոնգիտուդե հասցեն">
                         </div>
                         <div class="form-group">

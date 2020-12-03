@@ -59,6 +59,19 @@ class HomeController extends Controller
         $appa = new Appa();
         $appa->name = $req->input('name');
         $appa->phone = $req->input('phone');
+
+        if ($req->hasfile('image')){
+            $file = $req->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/news/', $filename);
+            $appa->image = $filename;
+        }else{
+            $appa = new Appa();
+            $appa->name = $req->input('name');
+            $appa->phone = $req->input('phone');
+        }
+
         $appa->save();
         return redirect()->route('appa')->with('success','Հաջողությամբ ավելացվել է');
     }
@@ -77,6 +90,19 @@ class HomeController extends Controller
         $appa = Appa::find($id);
         $appa->name = $req->input('name');
         $appa->phone = $req->input('phone');
+
+        if ($req->hasfile('image')){
+            $file = $req->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/news/', $filename);
+            $appa->image = $filename;
+        }else{
+            $appa = Appa::find($id);
+            $appa->name = $req->input('name');
+            $appa->phone = $req->input('phone');
+        }
+
         $appa->save();
         return redirect()->route('appa',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }

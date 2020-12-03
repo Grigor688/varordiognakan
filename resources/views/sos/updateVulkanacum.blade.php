@@ -24,11 +24,11 @@
                             <input type="text" name="adress" class="form-control" id="adress" aria-describedby="emailHelp" value="{{$data->adress}}">
                         </div>
                         <div class="form-group">
-                            <label for="lat">Լատիտուդե</label>
+                            <label for="lat">Լատիտուդ</label>
                             <input type="text"  name="lat" class="form-control" id="lat" aria-describedby="emailHelp" value="{{$data->lat}}">
                         </div>
                         <div class="form-group">
-                            <label for="lng">Լոնգիտուդե</label>
+                            <label for="lng">Լոնգիտուդ</label>
                             <input type="text" name="lng" class="form-control" id="lng" aria-describedby="emailHelp" value="{{$data->lng}}">
                         </div>
                         <button type="submit" name="send" class="btn btn-success">Փոփոխել</button>

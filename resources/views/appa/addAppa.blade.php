@@ -16,7 +16,7 @@
             {{session('success')}}
         </div>
     @endif
-    <form action="{{route('submitAppa')}}" method="post">
+    <form action="{{route('submitAppa')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="container">
             <div class="row">
@@ -28,8 +28,12 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Հեռախոսահամար</label>
-                            <input type="text" name="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Գրեք հեռախոսահամարը">
+                            <input type="text" name="phone" class="form-control" id="phone" aria-describedby="emailHelp" value="+374">
                         </div>
+                        <div class="caption">
+                            <input type="file" name="image" class="form-control">
+                        </div>
+                        <br>
                         <button type="submit" name="send" class="btn btn-success">Ավելացնել</button>
                     </div>
                 </div>

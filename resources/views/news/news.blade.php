@@ -23,7 +23,7 @@
                                     <textarea  name="newses" class="form-control" id="newses" aria-describedby="emailHelp">{{$news->newses}}</textarea>
                                 </div>
                             </div>
-                            <button type="submit" style="margin-top: 4px" class='btn btn-link btn-warning edit a_edit'>Փոփոխել</button>
+                            <button type="submit" style="margin-top: 4px;color: white" class='btn btn-link btn-primary edit a_edit'>Փոփոխել</button>
                             <a href='{{route('deleteNews', $news->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
                         </form>
                     </div>

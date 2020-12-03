@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="24d9d8c8-631c-42e0-a8f3-569fa81075cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/advice/advice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/advice/advice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/appa/addAppa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/appa/addAppa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/appa/appa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/appa/appa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/appa/updateAppa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/appa/updateAppa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ogtater/ogtater.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ogtater/ogtater.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner/partner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner/partner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sos/addEvakuator.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sos/addEvakuator.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sos/addVulkanacum.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sos/addVulkanacum.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sos/sos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sos/sos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sos/updateEvakuator.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sos/updateEvakuator.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sos/updateVulkanacum.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sos/updateVulkanacum.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spasarkum/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spasarkum/update.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,48 +46,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SpasarkumController.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="143" column="85" selection-start-line="143" selection-start-column="85" selection-end-line="143" selection-end-column="85" />
+            <state relative-caret-position="799">
+              <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
               <folding>
-                <element signature="e#40#65#0#PHP" expanded="true" />
+                <element signature="e#7#44#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
-              <folding>
-                <element signature="e#6441#6468#0#HTML" expanded="true" />
-                <element signature="e#6898#6925#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="430">
+              <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/update.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/appa/addAppa.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="92" />
-              <folding>
-                <element signature="e#5981#6009#0#HTML" expanded="true" />
-                <element signature="e#6481#6508#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -117,23 +116,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/sos/evakuator.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EvakuatorController.php" />
-        <option value="$PROJECT_DIR$/resources/views/sos/updateEvakuator.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/sos/addVulkanacum.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/sos/vulkanacum.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/sos/updateVulkanacum.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/VulkanacumController.php" />
         <option value="$PROJECT_DIR$/resources/views/gmaps2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/gmaps.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/sos/sos.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spasarkum/gmapsService.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Appa.php" />
         <option value="$PROJECT_DIR$/resources/views/appa/addAppa.php" />
-        <option value="$PROJECT_DIR$/resources/views/appa/addAppa.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/appa/appa.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/appa/updateAppa.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/public/css/app.css" />
@@ -155,9 +144,6 @@
         <option value="$PROJECT_DIR$/app/Models/Orientation.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrinetationController.php" />
         <option value="$PROJECT_DIR$/resources/views/orientation/orientation.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/advice/advice.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/news/news.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/partner/partner.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PartnerController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/public/js/tempusdominus-bootstrap-4.min.js" />
@@ -165,8 +151,21 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/public/js/form.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SpasarkumController.php" />
-        <option value="$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spasarkum/update.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/sos/addEvakuator.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/sos/addVulkanacum.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/sos/updateEvakuator.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/sos/updateVulkanacum.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/appa/updateAppa.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/news/news.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/advice/advice.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partner/partner.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/sos/sos.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/ogtater/ogtater.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/appa/appa.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/appa/addAppa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php" />
       </list>
     </option>
@@ -276,7 +275,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -288,7 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,26 +345,18 @@
               <item name="laravel7.my" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel7.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel7.my" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel7.my" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel7.my" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="spasarkum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel7.my" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel7.my" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,12 +439,13 @@
       <workItem from="1606461733530" duration="14621000" />
       <workItem from="1606559570795" duration="1937000" />
       <workItem from="1606806257860" duration="19298000" />
-      <workItem from="1606893771804" duration="15619000" />
+      <workItem from="1606893771804" duration="16500000" />
+      <workItem from="1606979140150" duration="5506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306265000" />
+    <option name="totallyTimeSpent" value="312652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -466,10 +457,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25945538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -495,90 +486,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/appa/updateAppa.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/appa/appa.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/xampp/htdocs/collection-cards/header.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1189">
-          <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Evakuator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="86" column="113" selection-start-line="86" selection-start-column="113" selection-end-line="86" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="87" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dist/img/avatar.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/sos/addEvakuator.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="true" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1129" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/updateNews.blade.php" />
-    <entry file="file://$PROJECT_DIR$/public/uploads/news/1606402499.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/uploads/news/1606402559.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -609,16 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvakuatorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="e#39#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OgtaterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -635,16 +532,6 @@
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#39#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AppaJsonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#39#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,35 +625,6 @@
     <entry file="file://$PROJECT_DIR$/app/Models/Orientation.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/orientation/orientation.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrinetationController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/advice/advice.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="92" selection-start-line="13" selection-start-column="92" selection-end-line="13" selection-end-column="92" />
-          <folding>
-            <element signature="e#498#533#0#HTML" expanded="true" />
-            <element signature="e#576#629#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/news/news.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="99" lean-forward="true" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="129" />
-          <folding>
-            <element signature="e#654#689#0#HTML" expanded="true" />
-            <element signature="e#732#785#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partner/partner.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="60" column="75" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PartnerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -777,40 +635,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
-          <folding>
-            <element signature="e#7#44#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/moment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/tempusdominus-bootstrap-4.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/tempusdominus-bootstrap-4.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24617" selection-start-line="6" selection-start-column="24617" selection-end-line="6" selection-end-column="24617" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/moment.js" />
+    <entry file="file://$PROJECT_DIR$/public/css/tempusdominus-bootstrap-4.min.css" />
+    <entry file="file://$PROJECT_DIR$/public/js/tempusdominus-bootstrap-4.min.js" />
     <entry file="file://$PROJECT_DIR$/public/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -825,42 +652,206 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvakuatorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#39#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sos/addEvakuator.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sos/addVulkanacum.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sos/vulkanacum.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sos/updateVulkanacum.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sos/updateEvakuator.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AppaJsonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/appa/updateAppa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="99" selection-start-line="2" selection-start-column="99" selection-end-line="2" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/update.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="103" column="28" lean-forward="true" selection-start-line="103" selection-start-column="28" selection-end-line="109" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SpasarkumController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="143" column="85" selection-start-line="143" selection-start-column="85" selection-end-line="143" selection-end-column="85" />
+        <state relative-caret-position="-185">
+          <caret line="115" column="61" lean-forward="true" selection-start-line="115" selection-start-column="61" selection-end-line="115" selection-end-column="61" />
           <folding>
             <element signature="e#40#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/update.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="92" />
+        <state relative-caret-position="356">
+          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
           <folding>
-            <element signature="e#5981#6009#0#HTML" expanded="true" />
-            <element signature="e#6481#6508#0#HTML" expanded="true" />
+            <element signature="e#40#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/advice/advice.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
+        <state relative-caret-position="340">
+          <caret line="20" column="148" selection-start-line="20" selection-start-column="148" selection-end-line="20" selection-end-column="148" />
           <folding>
-            <element signature="e#6441#6468#0#HTML" expanded="true" />
-            <element signature="e#6898#6925#0#HTML" expanded="true" />
+            <element signature="e#1158#1194#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/spasarkum.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+        <state relative-caret-position="408">
+          <caret line="72" column="151" selection-start-line="72" selection-start-column="151" selection-end-line="72" selection-end-column="151" />
+          <folding>
+            <element signature="e#5031#5051#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/news/news.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="148" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partner/partner.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="49" column="80" lean-forward="true" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
+          <folding>
+            <element signature="e#3808#3828#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sos/sos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="56" column="85" lean-forward="true" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
+          <folding>
+            <element signature="e#2745#2765#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ogtater/ogtater.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="57" column="162" selection-start-line="57" selection-start-column="162" selection-end-line="57" selection-end-column="162" />
+          <folding>
+            <element signature="e#3604#3624#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/appa/appa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="38" column="159" selection-start-line="38" selection-start-column="159" selection-end-line="38" selection-end-column="159" />
+          <folding>
+            <element signature="e#2188#2208#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
+          <folding>
+            <element signature="e#7#44#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/appa/addAppa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/collection-cards/personal_checklist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#219#226#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/htdocs/collection-cards/personal_modal.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/xampp/htdocs/collection-cards/custom_modal.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/xampp/htdocs/collection-cards/profile-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2244">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#219#226#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#221#228#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spasarkum/addForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
         </state>
       </provider>
     </entry>
