@@ -11,21 +11,20 @@
             <div class="row">
                 @foreach($data as $news)
                     <div class="col-md-3 divNews">
-                        <form action="{{route('updateNews',$news->id)}}" method="post">
-                            @csrf
                             <div class="thumbnail">
                                 <div style="width: 249px;height: 205px;">
                                     <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$news->image}}">
                                 </div>
 
                                 <div class="caption">
-                                    <input type="text" name="title" class="form-control" value="{{$news->title}}">
-                                    <textarea  name="newses" class="form-control" id="newses" aria-describedby="emailHelp">{{$news->newses}}</textarea>
+                                    <div style="font-size: 20px;border: 1px solid powderblue;border-radius: 10px">{{$news->title}}</div>
+                                    <br>
+                                    <div style="border: 1px solid powderblue;border-radius: 10px;word-break: break-all">{{$news->newses}}</div>
                                 </div>
                             </div>
-                            <button type="submit" style="margin-top: 4px;color: white" class='btn btn-link btn-primary edit a_edit'>Փոփոխել</button>
-                            <a href='{{route('deleteNews', $news->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
-                        </form>
+                            <br>
+                            <a href="{{route('updateNews', $news->id)}}" class="btn astyle">Փոփոխել</a>
+                            <a href="{{route('deleteNews', $news->id)}}" class='btn btn-link  remove'><i class='fa fa-times iclass'></i></a>
                     </div>
                     <br>
                 @endforeach

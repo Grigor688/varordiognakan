@@ -46,11 +46,30 @@ class AdviceJsonController extends Controller
         return redirect()->route('advice')->with('deleted','Հաջողությամբ ջնջվել է');
     }
 
-    public function updateAdvice($id, Request $req){
+    public function updateAdvice($id){
+        $advice = Advice::find($id);
+        return view('advice.updateAdvice', ['data' => $advice]);
+
+    }
+
+    public function updateFormAdvice($id, Request $req){
         $advice = Advice::find($id);
         $advice->advice = $req->input('advice');
         $advice->title = $req->input('title');
+
+        if ($req->hasfile('image')){
+            $file = $req->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/advice/', $filename);
+            $advice->image = $filename;
+        }else{
+            $advice = Advice::find($id);
+            $advice->advice = $req->input('advice');
+            $advice->title = $req->input('title');
+        }
+
         $advice->save();
-        return redirect()->route('advice')->with('updated','Հաջողությամբ փոփոխվել է');
+        return redirect()->route('advice',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }
 }

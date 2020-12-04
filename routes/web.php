@@ -15,7 +15,7 @@ use App\Http\Controllers\OgtaterJsonController;
 use App\Http\Controllers\AppaJsonController;
 use App\Http\Controllers\NewsJsonController;
 use App\Http\Controllers\AdviceJsonController;
-use App\Http\Controllers\OrinetationController;
+
 
 
 
@@ -56,7 +56,7 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('gmaps/{id}',[HomeController::class, 'gmaps'])->name('google');
 //EVAKUATOR
     Route::get('evakuator',[EvakuatorController::class, 'index'])->name('evakuator');
-    Route::get('addevakuator',[EvakuatorController::class, 'add'])->name('addevakuator');
+    Route::get('addevakuator',[EvakuatorController::class, 'addForm'])->name('addevakuator');
     Route::post('submitEvakuator', [EvakuatorController::class, 'submitEv'])->name('submitEvakuator');
     Route::get('deleteEvakuator/{id}',[EvakuatorController::class, 'deleteEvakuator'])->name('deleteEvakuator');
     Route::get('updateEvakuator/{id}', [EvakuatorController::class, 'updateEvakuator'])->name('updateEvakuator');
@@ -79,7 +79,8 @@ Route::group(["middleware" => "auth"], function(){
     Route::post('updateAppaForm/{id}', [HomeController::class, 'updateAppaForm'])->name('updateAppaForm');
 //NORUTYUN
     Route::get('news', [NewsJsonController::class, 'news'])->name('news');
-    Route::post('updateNews/{id}', [NewsJsonController::class, 'updateNews'])->name('updateNews');
+    Route::get('updateNews/{id}', [NewsJsonController::class, 'updateNews'])->name('updateNews');
+    Route::post('updateFormNews/{id}', [NewsJsonController::class, 'updateFormNews'])->name('updateFormNews');
     Route::get('addnews', [NewsJsonController::class, 'addnews'])->name('addnews');
     Route::post('submitNews', [NewsJsonController::class, 'submitNews'])->name('submitNews');
     Route::get('deleteNews/{id}', [NewsJsonController::class, 'deleteNews'])->name('deleteNews');
@@ -88,7 +89,8 @@ Route::group(["middleware" => "auth"], function(){
     Route::post('submitAdvice', [AdviceJsonController::class, 'submitAdvice'])->name('submitAdvice');
     Route::get('addAdvice', [AdviceJsonController::class, 'addAdvice'])->name('addAdvice');
     Route::get('deleteAdvice/{id}', [AdviceJsonController::class, 'deleteAdvice'])->name('deleteAdvice');
-    Route::post('updateAdvice/{id}', [AdviceJsonController::class, 'updateAdvice'])->name('updateAdvice');
+    Route::get('updateAdvice/{id}', [AdviceJsonController::class, 'updateAdvice'])->name('updateAdvice');
+    Route::post('updateFormAdvice/{id}', [AdviceJsonController::class, 'updateFormAdvice'])->name('updateFormAdvice');
 
 });
 //API Linker

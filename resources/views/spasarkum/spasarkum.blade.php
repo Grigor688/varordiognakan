@@ -71,7 +71,7 @@
                                     <td scope="col">{{$element->lng}}</td>
                                     <td class='text-right'>
                                         <a href='{{route('update', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white" class='fa fa-edit'></i></a>
-                                        <a href='{{route('delete', $element->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times'></i></a>
+                                        <a href='{{route('delete', $element->id)}}' class='btn btn-link btn-danger remove'><i class='fa fa-times '></i></a>
                                     </td>
                                     </tr>
                                     @endforeach

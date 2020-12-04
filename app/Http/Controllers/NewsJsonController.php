@@ -16,12 +16,30 @@ class NewsJsonController extends Controller
         return view('news.news', ['data'=>$news]);
     }
 
-    public function updateNews($id, Request $req){
+    public function updateNews($id){
+        $news = News::find($id);
+        return view('news.updateNews', ['data' => $news]);
+    }
+
+    public function updateFormNews($id, Request $req){
         $news = News::find($id);
         $news->newses = $req->input('newses');
         $news->title = $req->input('title');
+
+        if ($req->hasfile('image')){
+            $file = $req->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/news/', $filename);
+            $news->image = $filename;
+        }else{
+            $news = News::find($id);
+            $news->newses = $req->input('newses');
+            $news->title = $req->input('title');
+        }
+
         $news->save();
-        return redirect()->route('news')->with('updated','Հաջողությամբ փոփոխվել է');
+        return redirect()->route('news',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }
 
     public function addnews(Request $request){

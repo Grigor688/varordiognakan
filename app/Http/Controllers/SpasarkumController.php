@@ -92,7 +92,6 @@ class SpasarkumController extends Controller
         $data->work_day_to = date('Y-m-d\TH:i:s', strtotime($data->work_day_to));
         $data->special_offer_time_from = date('Y-m-d\TH:i:s', strtotime($data->special_offer_time_from));
         $data->special_offer_time_to = date('Y-m-d\TH:i:s', strtotime($data->special_offer_time_to));
-
         return view('spasarkum.update', ['data' => $data]);
     }
 
