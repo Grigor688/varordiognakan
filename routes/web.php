@@ -102,6 +102,12 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('NewsJson', [NewsJsonController::class, 'index']);
     Route::get('AdviceJson', [AdviceJsonController::class, 'index']);
 
+
 Auth::routes();
+
+Route::get('/clear-cache', function() {
+    \Illuminate\Support\Facades\Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
