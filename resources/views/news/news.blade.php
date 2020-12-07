@@ -19,10 +19,8 @@
                                 <div class="caption">
                                     <div style="font-size: 20px;border: 1px solid powderblue;border-radius: 10px">{{$news->title}}</div>
                                     <br>
-                                    <div style="border: 1px solid powderblue;border-radius: 10px;word-break: break-all">{{$news->newses}}</div>
                                 </div>
                             </div>
-                            <br>
                             <a href="{{route('updateNews', $news->id)}}" class="btn astyle">Փոփոխել</a>
                             <a href="{{route('deleteNews', $news->id)}}" class='btn btn-link  remove'><i class='fa fa-times iclass'></i></a>
                     </div>

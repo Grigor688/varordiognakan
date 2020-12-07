@@ -73,25 +73,60 @@
                                 <option value="0">0</option>
                             </select>
                         </div>
-                        <button type="submit" name="send" class="btn btn-success">Փոփոխել</button>
                     </div>
                     <div class="col-md-6 formDiv design">
                         <div class="form-group">
                             <label for="work_day_from">Աշխատանքային օրեր սկսած</label>
-                            <input type="datetime-local" name="work_day_from" class="form-control" id="work_day_from" aria-describedby="emailHelp" value="{{$data->work_day_from}}">
+                            <select name="work_day_from" id="work_day_from" class="form-control">
+                                <option>Երկուշաբթի</option>
+                                <option>Երեքշաբթի</option>
+                                <option>Չորեքշաբթի</option>
+                                <option>Հինգշաբթի</option>
+                                <option>ՈՒրբաթ</option>
+                                <option>Շաբաթ</option>
+                                <option>Կիրակի</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
                             <label for="work_day_to">Աշխատանքային օրեր մինչև</label>
-                            <input type="datetime-local" name="work_day_to" class="form-control" id="work_day_to" aria-describedby="emailHelp" value="{{$data->work_day_to}}">
+                            <select name="work_day_to" id="work_day_to" class="form-control">
+                                <option>Երկուշաբթի</option>
+                                <option>Երեքշաբթի</option>
+                                <option>Չորեքշաբթի</option>
+                                <option>Հինգշաբթի</option>
+                                <option>ՈՒրբաթ</option>
+                                <option>Շաբաթ</option>
+                                <option>Կիրակի</option>
+                            </select>
                         </div>
 
+                        <div class="form-group">
+                            <label for="work_time_from" style="color: antiquewhite">Աշխատանքային ժամեր սկսած</label>
+                            <input type="time" name="work_time_from" class="form-control" id="work_time_from" aria-describedby="emailHelp" value="{{$data->work_time_from}}">
+                            <label for="work_time_to" style="color: antiquewhite">Աշխատանքային ժամեր մինչև</label>
+                            <input type="time" name="work_time_to" class="form-control" id="work_time_to" aria-describedby="emailHelp" value="{{$data->work_time_to}}">
+                        </div>
+
+                        @if($data->saturday_work_time_from)
+                                <div class="form-group" style="margin-bottom: -3px">
+                                    <label for="addDay">Շաբաթ օրվա աշխատաժամերը</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="saturday_work_time_from" style="color: antiquewhite">Աշխատանքային ժամեր սկսած</label>
+                                    <input type="time" name="saturday_work_time_from" class="form-control" id="saturday_work_time_from" aria-describedby="emailHelp" value="{{$data->saturday_work_time_from}}">
+                                    <label for="saturday_work_time_to" style="color: antiquewhite">Աշխատանքային ժամեր մինչև</label>
+                                    <input type="time" name="saturday_work_time_to" class="form-control" id="saturday_work_time_to" aria-describedby="emailHelp" value="{{$data->saturday_work_time_to}}">
+                                </div>
+
+                        @endif
+                        @if($data->image)
                         <div class="form-group">
                             <h5>Հատուկ առաջարկ</h5>
                             <label style="color: antiquewhite">Հատուկ առաջարկի սկիզբ</label>
                             <input type="datetime-local" class="form-control" name="special_offer_time_from" value="{{$data->special_offer_time_from}}">
                             <br>
-                            <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
+                                <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp">{{$data->special_offer}}</textarea>
                             <br>
                             <label style="color: antiquewhite">Հատուկ առաջարկի ավարտ</label>
                             <input type="datetime-local" class="form-control" name="special_offer_time_to" value="{{$data->special_offer_time_to}}">
@@ -109,6 +144,10 @@
                                 <textarea  name="orientation" class="form-control" id="orientation" aria-describedby="emailHelp">{{$data->orientation}}</textarea>
                             </div>
                         </div>
+                        @endif
+
+                        <br>
+                        <button type="submit" name="send" class="btn btn-success">Փոփոխել</button>
                     </div>
                 </div>
             </div>

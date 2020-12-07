@@ -12,7 +12,7 @@
                         </div>
                         <div class="form-group">
                             <label for="newses">Նորություն</label>
-                            <input type="text"  name="newses" class="form-control" id="newses" aria-describedby="emailHelp" value="{{$data->newses}}">
+                            <textarea  name="newses" class="form-control" id="newses" aria-describedby="emailHelp">{{$data->newses}}</textarea>
                         </div>
                         <div style="width: 249px;height: 205px;">
                             <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$data->image}}">

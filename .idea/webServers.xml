@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6f5df06c-ad1d-4aa8-b980-85e9361be29c" name="varordiognakan" url="http://194.135.81.127">
+        <fileTransfer host="194.135.81.127" port="22" rootFolder="/var/www/varordiognakan.omegacoding.com" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

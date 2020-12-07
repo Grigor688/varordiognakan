@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class SpasarkumController extends Controller
 {
+    public function  __construct() {
+        Spasarkum::where('special_offer_time_to','<',\Illuminate\Support\Carbon::now())->update([
+            'special_offer_time_to'=>null,
+            'special_offer_time_from'=>null,
+            'special_offer'=>null,
+        ]);
+    }
+
     public function submit(Request $req){
         $validatedData = $req->validate([
             'number_adress' => 'required|integer|unique:spasarkums',
@@ -19,6 +27,10 @@ class SpasarkumController extends Controller
         $spasarkum->activity = $req->input('activity');
         $spasarkum->work_day_from = $req->input('work_day_from');
         $spasarkum->work_day_to = $req->input('work_day_to');
+        $spasarkum->work_time_from = $req->input('work_time_from');
+        $spasarkum->work_time_to = $req->input('work_time_to');
+        $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
+        $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
         $spasarkum->phone_number = $req->input('phone_number');
         $spasarkum->email = $req->input('email');
         $spasarkum->site = $req->input('site');
@@ -46,6 +58,10 @@ class SpasarkumController extends Controller
             $spasarkum->activity = $req->input('activity');
             $spasarkum->work_day_from = $req->input('work_day_from');
             $spasarkum->work_day_to = $req->input('work_day_to');
+            $spasarkum->work_time_from = $req->input('work_time_from');
+            $spasarkum->work_time_to = $req->input('work_time_to');
+            $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
+            $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
             $spasarkum->phone_number = $req->input('phone_number');
             $spasarkum->email = $req->input('email');
             $spasarkum->site = $req->input('site');
@@ -88,8 +104,8 @@ class SpasarkumController extends Controller
 
 //        $data = Spasarkum::with(['advices', 'newses'])->where(['id' => $id])->first();
         $data = Spasarkum::find($id);
-        $data->work_day_from = date('Y-m-d\TH:i:s', strtotime($data->work_day_from));
-        $data->work_day_to = date('Y-m-d\TH:i:s', strtotime($data->work_day_to));
+//        $data->work_day_from = date('Y-m-d\TH:i:s', strtotime($data->work_day_from));
+//        $data->work_day_to = date('Y-m-d\TH:i:s', strtotime($data->work_day_to));
         $data->special_offer_time_from = date('Y-m-d\TH:i:s', strtotime($data->special_offer_time_from));
         $data->special_offer_time_to = date('Y-m-d\TH:i:s', strtotime($data->special_offer_time_to));
         return view('spasarkum.update', ['data' => $data]);
@@ -103,6 +119,10 @@ class SpasarkumController extends Controller
         $spasarkum->activity = $req->input('activity');
         $spasarkum->work_day_from = $req->input('work_day_from');
         $spasarkum->work_day_to = $req->input('work_day_to');
+        $spasarkum->work_time_from = $req->input('work_time_from');
+        $spasarkum->work_time_to = $req->input('work_time_to');
+        $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
+        $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
         $spasarkum->phone_number = $req->input('phone_number');
         $spasarkum->email = $req->input('email');
         $spasarkum->site = $req->input('site');
@@ -132,6 +152,10 @@ class SpasarkumController extends Controller
             $spasarkum->activity = $req->input('activity');
             $spasarkum->work_day_from = $req->input('work_day_from');
             $spasarkum->work_day_to = $req->input('work_day_to');
+            $spasarkum->work_time_from = $req->input('work_time_from');
+            $spasarkum->work_time_to = $req->input('work_time_to');
+            $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
+            $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
             $spasarkum->phone_number = $req->input('phone_number');
             $spasarkum->email = $req->input('email');
             $spasarkum->site = $req->input('site');

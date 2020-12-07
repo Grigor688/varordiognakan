@@ -7,4 +7,7 @@ $(document).ready(function(){
             $(".changeInput").prop("disabled",false);
         }
     })
+    $(".addDay").click(function () {
+        $("#hiddenSaturdayForm").css("display","block");
+    })
 })

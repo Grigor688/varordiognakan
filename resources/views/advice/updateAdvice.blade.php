@@ -12,7 +12,7 @@
                         </div>
                         <div class="form-group">
                             <label for="advice">Խորհուրդ</label>
-                            <input type="text"  name="advice" class="form-control" id="advice" aria-describedby="emailHelp" value="{{$data->advice}}">
+                            <textarea  name="advice" class="form-control" id="advice" aria-describedby="emailHelp">{{$data->advice}}</textarea>
                         </div>
                         <div style="width: 249px;height: 205px;">
                             <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/advice/{{$data->image}}">
