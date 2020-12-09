@@ -100,7 +100,7 @@
                                 <option>Երեքշաբթի</option>
                                 <option>Չորեքշաբթի</option>
                                 <option>Հինգշաբթի</option>
-                                <option>ՈՒրբաթ</option>
+                                <option>Ուրբաթ</option>
                                 <option>Շաբաթ</option>
                                 <option>Կիրակի</option>
                             </select>
@@ -113,7 +113,7 @@
                                 <option>Երեքշաբթի</option>
                                 <option>Չորեքշաբթի</option>
                                 <option>Հինգշաբթի</option>
-                                <option>ՈՒրբաթ</option>
+                                <option>Ուրբաթ</option>
                                 <option>Շաբաթ</option>
                                 <option>Կիրակի</option>
                             </select>
@@ -129,7 +129,7 @@
                             <label for="addDay">Ավելացնել շաբաթ օրվա աշխատաժամեր</label>
                         </div>
                         <div class="form-group">
-                            <span class="addDay">+</span>
+                            <span id="addDay" class="addDay">+</span>
                         </div>
                         <div id="hiddenSaturdayForm" class="form-group">
                             <label for="saturday_work_time_from" style="color: antiquewhite">Աշխատանքային ժամեր սկսած</label>

@@ -9,5 +9,14 @@ $(document).ready(function(){
     })
     $(".addDay").click(function () {
         $("#hiddenSaturdayForm").css("display","block");
+        $(this).removeClass("addDay");
+        $(this).addClass("minus");
+        $(".minus").on('click', function () {
+            $("#hiddenSaturdayForm").css("display","none");
+            $(this).removeClass("minus");
+            $(this).addClass("addDay");
+        })
     })
+
+
 })

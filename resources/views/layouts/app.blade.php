@@ -7,7 +7,7 @@
 
     <title>Admin</title>
     @yield('content4')
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app.css?id">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Font Awesome Icons -->
@@ -234,6 +234,14 @@
                                 <a href="{{route('advice')}}" class="nav-link">
                                     <i class="nav-icon far fa-circle text-fuchsia"></i>
                                     <p>Խորհուրդներ</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('answer')}}" class="nav-link">
+                                    <i style="color: chartreuse" class="nav-icon far fa-envelope">
+                                        <span class="messageCount">{{$messages}}</span>
+                                    </i>
+                                    <p>Նամակներ</p>
                                 </a>
                             </li>
                         </ul>

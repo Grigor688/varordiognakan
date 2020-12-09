@@ -15,6 +15,7 @@ use App\Http\Controllers\OgtaterJsonController;
 use App\Http\Controllers\AppaJsonController;
 use App\Http\Controllers\NewsJsonController;
 use App\Http\Controllers\AdviceJsonController;
+use App\Http\Controllers\AnswerController;
 
 
 
@@ -91,6 +92,12 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('deleteAdvice/{id}', [AdviceJsonController::class, 'deleteAdvice'])->name('deleteAdvice');
     Route::get('updateAdvice/{id}', [AdviceJsonController::class, 'updateAdvice'])->name('updateAdvice');
     Route::post('updateFormAdvice/{id}', [AdviceJsonController::class, 'updateFormAdvice'])->name('updateFormAdvice');
+//NAMAKNER
+    Route::get('answer',[AnswerController::class, 'index'])->name('answer');
+    Route::get('deleteAnswer/{id}', [AnswerController::class, 'deleteAnswer'])->name('deleteAnswer');
+    Route::get('updateAnswer/{id}', [AnswerController::class, 'updateAnswer'])->name('updateAnswer');
+    Route::post('updateFormAnswer/{id}', [AnswerController::class, 'updateFormAnswer'])->name('updateFormAnswer');
+
 
 });
 //API Linker
@@ -101,6 +108,8 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('AppaJson', [AppaJsonController::class, 'index']);
     Route::get('NewsJson', [NewsJsonController::class, 'index']);
     Route::get('AdviceJson', [AdviceJsonController::class, 'index']);
+    Route::get('createquestion/{title}/{question}', [AnswerController::class, 'createQuestion'])->name('createquestion');
+    Route::get('getAnswer/{id}', [AnswerController::class, 'getAnswer'])->name('getAnswer');
 
 
 Auth::routes();

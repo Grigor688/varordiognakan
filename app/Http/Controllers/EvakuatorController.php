@@ -14,6 +14,8 @@ class EvakuatorController extends Controller
         ]);
     }
 
+
+
     public function addForm(){
         return view('spasarkum.addForm');
     }

@@ -82,7 +82,7 @@
                                 <option>Երեքշաբթի</option>
                                 <option>Չորեքշաբթի</option>
                                 <option>Հինգշաբթի</option>
-                                <option>ՈՒրբաթ</option>
+                                <option>Ուրբաթ</option>
                                 <option>Շաբաթ</option>
                                 <option>Կիրակի</option>
                             </select>
@@ -95,7 +95,7 @@
                                 <option>Երեքշաբթի</option>
                                 <option>Չորեքշաբթի</option>
                                 <option>Հինգշաբթի</option>
-                                <option>ՈՒրբաթ</option>
+                                <option>Ուրբաթ</option>
                                 <option>Շաբաթ</option>
                                 <option>Կիրակի</option>
                             </select>

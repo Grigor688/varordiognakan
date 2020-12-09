@@ -60,11 +60,18 @@ td{
 .imgDiv{
   padding: 9px 35px 0px 23px;
 }
+.messageCount{
+  font-size: 11px;
+  position: absolute;
+  color: red;
+  left: 40px;
+  top: 5px;
+}
 .mapDiv{
   position: relative;width: 100%;
   height: 500px;
 }
-.addDay{
+#addDay{
   background: yellow;
   color: black;
   font-size: 34px;
@@ -72,6 +79,7 @@ td{
   border-radius: 36px;
   cursor: pointer;
 }
+
 #hiddenSaturdayForm{
   display: none;
 }
