@@ -19,7 +19,7 @@
                             <textarea  name="answer" class="form-control" id="answer" aria-describedby="emailHelp">{{$data->answer}}</textarea>
                         </div>
 
-                        <button type="submit" name="send" class="btn btn-success">Փոփոխել</button>
+                        <button type="submit" name="send" class="btn btn-success">Պատասխանել</button>
                     </div>
 
                 </div>

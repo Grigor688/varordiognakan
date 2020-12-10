@@ -9,8 +9,6 @@ class AnswerController extends Controller
 {
     public function index(){
         $data = Answer::all();
-
-
         return view('answer.answer', compact('data'));
     }
 
@@ -38,7 +36,6 @@ class AnswerController extends Controller
     }
 
     public function updateAnswer($id){
-
         Answer::find($id)->update([
             'status'=>'active'
         ]);

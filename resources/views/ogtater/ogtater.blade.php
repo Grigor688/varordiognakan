@@ -8,11 +8,11 @@
                         <div class="card-body table-full-width">
                             <table id="datatables" class="table">
                                 @if(session('deleted'))
-                                    <div class="alert alert-danger sesionDiv">
+                                    <div class="alert sesionDivdel">
                                         {{session('deleted')}}
                                     </div>
                                 @elseif(session('updated'))
-                                    <div class="alert alert-success sesionDiv">
+                                    <div class="alert sesionDiv">
                                         {{session('updated')}}
                                     </div>
                                 @endif
@@ -55,7 +55,7 @@
                                         <td scope="col">{{$element->lat}}</td>
                                         <td scope="col">{{$element->lng}}</td>
                                         <td class='text-right'>
-                                            <a href='{{route('updateOgtater', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white" class='fa fa-edit'></i></a>
+                                            <a href='{{route('updateOgtater', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
                                             <a href='{{route('delete22', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
                                         </td>
                                     </tr>

@@ -16,6 +16,7 @@ use App\Http\Controllers\AppaJsonController;
 use App\Http\Controllers\NewsJsonController;
 use App\Http\Controllers\AdviceJsonController;
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\RulesController;
 
 
 
@@ -97,6 +98,13 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('deleteAnswer/{id}', [AnswerController::class, 'deleteAnswer'])->name('deleteAnswer');
     Route::get('updateAnswer/{id}', [AnswerController::class, 'updateAnswer'])->name('updateAnswer');
     Route::post('updateFormAnswer/{id}', [AnswerController::class, 'updateFormAnswer'])->name('updateFormAnswer');
+//KANONNER
+    Route::get('rules', [RulesController::class, 'index'])->name('rules');
+    Route::get('deleteRule/{id}', [RulesController::class, 'deleteRule'])->name('deleteRule');
+    Route::get('addRule', [RulesController::class, 'addRule'])->name('addRule');
+    Route::post('submitRule',[RulesController::class, 'submitRule'])->name('submitRule');
+    Route::get('updateRule/{id}', [RulesController::class, 'updateRule'])->name('updateRule');
+    Route::post('updateRuleForm/{id}', [RulesController::class, 'updateRuleForm'])->name('updateRuleForm');
 
 
 });

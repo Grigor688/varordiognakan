@@ -7,14 +7,14 @@
                     <div class="card bootstrap-table">
                         <div class="card-body table-full-width">
                             <table id="datatables" class="table">
-                                    <a href="{{route('evakuator')}}" class="btn btn-primary">Էվակուատոր</a>
-                                    <a href="{{route('vulkanacum')}}" style="margin-left: 10px" class="btn btn-primary">Վուլկանացում</a>
+                                    <a href="{{route('evakuator')}}" class="btn astyle">Էվակուատոր</a>
+                                    <a href="{{route('vulkanacum')}}" style="margin-left: 10px" class="btn astyle">Վուլկանացում</a>
                                 @if(session('deleted'))
-                                    <div class="alert alert-danger sesionDiv">
+                                    <div class="alert sesionDivdel">
                                         {{session('deleted')}}
                                     </div>
                                 @elseif(session('updated'))
-                                    <div class="alert alert-success sesionDiv">
+                                    <div class="alert sesionDiv">
                                         {{session('updated')}}
                                     </div>
                                 @endif
@@ -43,7 +43,7 @@
                                     <tr>
                                         <th scope="col">{{$element->id}}</th>
                                         <td class='text-right'>
-                                            <a href='{{route('google', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white" class='fa fa-edit'></i></a>
+                                            <a href='{{route('google', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
                                             <a href='#' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
                                         </td>
                                         <td scope="col">{{$element->firstname}}</td>

@@ -9,15 +9,15 @@
                             <table id="datatables" class="table">
                                 <div class="toolbar">
                                     <a href="{{route('addAppa')}}" class="nav-link">
-                                        <button id="send-mail-list" class="form-control btn-success">Ավելացնել</button>
+                                        <button id="send-mail-list" class="form-control astyle">Ավելացնել</button>
                                     </a>
                                 </div>
                                 @if(session('deleted'))
-                                    <div class="alert alert-danger sesionDiv">
+                                    <div class="alert sesionDivdel">
                                         {{session('deleted')}}
                                     </div>
                                 @elseif(session('updated'))
-                                    <div class="alert alert-success sesionDiv">
+                                    <div class="alert sesionDiv">
                                         {{session('updated')}}
                                     </div>
                                 @endif
@@ -36,7 +36,7 @@
                                         <td scope="col">{{$element->name}}</td>
                                         <td scope="col">{{$element->phone}}</td>
                                         <td class='text-right'>
-                                            <a href='{{route('updateAppa', $element->id)}}' class='btn btn-link btn-primary edit a_edit'><i style="color: white" class='fa fa-edit'></i></a>
+                                            <a href='{{route('updateAppa', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
                                             <a href='{{route('deleteAppa', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
                                         </td>
                                     </tr>

@@ -244,6 +244,12 @@
                                     <p>Նամակներ</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('rules')}}" class="nav-link">
+                                    <i class="nav-icon fas fa-file" style="color: aqua"></i>
+                                    <p>Կանոններ</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

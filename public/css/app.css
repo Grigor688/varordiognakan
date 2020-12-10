@@ -94,7 +94,7 @@ td{
 }
 .iclass{
   color: black;
-  font-size: 23px;
+  font-size: 17px;
   margin-top: 4px;
 }
 .divNews{
@@ -118,7 +118,7 @@ html {
 .formDiv{
     padding: 20px 30px !important;
     float:left;
-    margin-top: 10px;
+    margin-top: -17px;
 }
 .design{
   background: #cecece;
@@ -126,8 +126,18 @@ html {
   margin-top: 10px;
 }
 .sesionDiv{
-    width: 30%;
-    margin: 20px 20px;
+  width: 30%;
+  margin: 20px 20px;
+  background: white;
+  border-color: white;
+  color: green;
+}
+.sesionDivdel{
+  width: 30%;
+  margin: 20px 20px;
+  background: white;
+  border-color: white;
+  color: red;
 }
 article,
 aside,
