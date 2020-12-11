@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Answer;
+use App\Models\Card;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -27,6 +28,9 @@ class AppServiceProvider extends ServiceProvider
     {
         $answer_inactive = Answer::where('status','inactive')->get()->count();
         view()->share('messages', $answer_inactive);
+
+        $card_inactive = Card::where('status', 'inactive')->get()->count();
+        view()->share('count', $card_inactive);
 
         Schema::defaultStringLength(191);
     }

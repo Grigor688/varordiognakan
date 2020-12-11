@@ -11,6 +11,11 @@ class RulesController extends Controller
         return view('rules.rules', ['data'=>$rules]);
     }
 
+    public function indexJson(){
+        $data = Rule::all();
+        return json_encode($data);
+    }
+
     public function deleteRule($id){
         Rule::find($id)->delete();
         return redirect()->route('rules')->with('deleted','Հաջողությամբ ջնջվել է');

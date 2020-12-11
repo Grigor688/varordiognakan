@@ -250,6 +250,14 @@
                                     <p>Կանոններ</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('card')}}" class="nav-link">
+                                    <i class="nav-icon fas fa-book" style="color: cornflowerblue">
+                                        <span class="messageCount">{{$count}}</span>
+                                    </i>
+                                    <p>Քարտային վճարում</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

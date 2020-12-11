@@ -17,6 +17,7 @@ use App\Http\Controllers\NewsJsonController;
 use App\Http\Controllers\AdviceJsonController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\RulesController;
+use App\Http\Controllers\CardController;
 
 
 
@@ -105,6 +106,10 @@ Route::group(["middleware" => "auth"], function(){
     Route::post('submitRule',[RulesController::class, 'submitRule'])->name('submitRule');
     Route::get('updateRule/{id}', [RulesController::class, 'updateRule'])->name('updateRule');
     Route::post('updateRuleForm/{id}', [RulesController::class, 'updateRuleForm'])->name('updateRuleForm');
+//CARD
+    Route::get('card', [CardController::class, 'index'])->name('card');
+    Route::get('deleteCard/{id}', [CardController::class, 'deleteCard'])->name('deleteCard');
+    Route::get('updateCard/{id}', [CardController::class, 'updateCard'])->name('updateCard');
 
 
 });
@@ -118,6 +123,8 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('AdviceJson', [AdviceJsonController::class, 'index']);
     Route::get('createquestion/{title}/{question}', [AnswerController::class, 'createQuestion'])->name('createquestion');
     Route::get('getAnswer/{id}', [AnswerController::class, 'getAnswer'])->name('getAnswer');
+    Route::get('createCardPayment/{payment_card}/{payment_idram}/{adress}/{sum}/{end_of_term}', [CardController::class, 'createCardPayment'])->name('createCardPayment');
+    Route::get('rulesJson', [RulesController::class, 'indexJson'])->name('rulesJson');
 
 
 Auth::routes();
