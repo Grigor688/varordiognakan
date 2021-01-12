@@ -3,17 +3,28 @@
 namespace App\Http\Controllers;
 use App\Models\Card;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class CardController extends Controller
 {
-    public function index(Request $req){
-        $card = Card::all();
+    public function index(){
+        $card = Card::all()->sortKeysDesc();
         return view('card.card',['data'=>$card]);
     }
 
     public function deleteCard($id){
         Card::find($id)->delete();
         return redirect()->route('card')->with('deleted','Հաջողությամբ ջնջվել է');
+    }
+    public function updateCardEdit($id){
+        $data = Card::find($id);
+        return view('card.updateCard', ['data' => $data]);
+    }
+    public function updateCardEditForm($id, Request $req){
+        $card = Card::find($id);
+        $card->end_of_term = $req->input('end_of_term');
+        $card->save();
+        return redirect()->route('card',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }
 
     public function updateCard($id){

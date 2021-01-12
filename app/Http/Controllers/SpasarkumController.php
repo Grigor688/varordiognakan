@@ -82,7 +82,7 @@ class SpasarkumController extends Controller
     }
 
     public function allData(){
-        return view('spasarkum.spasarkum',['data'=>Spasarkum::all()]);
+        return view('spasarkum.spasarkum',['data'=>Spasarkum::all()->sortKeysDesc()]);
     }
 
     public function serviceMap($id){

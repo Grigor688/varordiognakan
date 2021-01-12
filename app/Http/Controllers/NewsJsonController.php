@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class NewsJsonController extends Controller
 {
     public function index(){
-        $news = News::all();
+        $news = News::orderBy('id','desc')->get();
         return json_encode($news);
     }
 
     public function news(){
-        $news = News::all();
+        $news = News::all()->sortKeysDesc();
         return view('news.news', ['data'=>$news]);
     }
 

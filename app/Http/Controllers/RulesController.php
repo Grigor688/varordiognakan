@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class RulesController extends Controller
 {
     public function index(){
-        $rules = Rule::all();
+        $rules = Rule::all()->sortKeysDesc();
         return view('rules.rules', ['data'=>$rules]);
     }
 
     public function indexJson(){
-        $data = Rule::all();
+        $data = Rule::orderBy('id','desc')->get();;
         return json_encode($data);
     }
 

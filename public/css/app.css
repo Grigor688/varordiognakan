@@ -61,18 +61,21 @@ td{
   padding: 9px 35px 0px 23px;
 }
 .messageCount{
-  font-size: 11px;
+  font-size: 9px;
   position: absolute;
-  color: red;
-  left: 40px;
-  top: 5px;
+  color: black;
+  left: 39px;
+  top: 0px;
+  padding: 2px 4px;
+  background: linear-gradient(180deg, rgba(252,217,0,1) 0%, rgba(251,196,0,1) 50%, rgba(250,174,0,1) 100%);
+  border-radius: 8px;
 }
 .mapDiv{
   position: relative;width: 100%;
   height: 500px;
 }
 #addDay{
-  background: yellow;
+  background: linear-gradient(180deg, rgba(252,217,0,1) 0%, rgba(251,196,0,1) 50%, rgba(250,174,0,1) 100%);
   color: black;
   font-size: 34px;
   padding: 0px 13px;

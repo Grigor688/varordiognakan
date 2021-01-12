@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class VulkanacumController extends Controller
 {
     public function index(){
-        $spasarkum = Spasarkum::select('*')->where('name', 'Վուլկանացում')->get();
+        $spasarkum = Spasarkum::select('*')->where('name', 'Վուլկանացում')->get()->sortKeysDesc();
         return view('sos.vulkanacum',[
             'data'=>$spasarkum
         ]);

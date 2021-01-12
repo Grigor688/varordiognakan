@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Appa extends Model
+class BuyModel extends Model
 {
-//  public $timestamps = false;
+    protected $fillable=[
+        'name'
+];
 }

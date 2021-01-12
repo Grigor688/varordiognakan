@@ -17,7 +17,7 @@
                     <div class="col-md-3 divNews">
                             <div class="thumbnail">
                                 <div style="width: 200px;height: 200px;">
-                                    <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/advice/{{$advice->image}}">
+                                    <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$advice->image}}">
                                 </div>
                                 <div class="caption">
                                     <div style="font-size: 18px;border-radius: 10px;width: 200px">{{$advice->title}}</div>

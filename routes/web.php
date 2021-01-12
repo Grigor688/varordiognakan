@@ -110,21 +110,28 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('card', [CardController::class, 'index'])->name('card');
     Route::get('deleteCard/{id}', [CardController::class, 'deleteCard'])->name('deleteCard');
     Route::get('updateCard/{id}', [CardController::class, 'updateCard'])->name('updateCard');
+    Route::get('updateCardEdit/{id}', [CardController::class, 'updateCardEdit'])->name('updateCardEdit');
+    Route::post('updateCardEditForm/{id}', [CardController::class, 'updateCardEditForm'])->name('updateCardEditForm');
 
 
 });
 //API Linker
-    Route::get('serviceJson', [SpasarkumJsonController::class, 'index']);
+    Route::get('serviceJson/{service}', [SpasarkumJsonController::class, 'index']);
     Route::get('vulcanizationJson', [VulkanacumJsonController::class, 'index']);
     Route::get('EvacuatorJson', [EvakuatorJsonController::class, 'index']);
     Route::get('UserJson', [OgtaterJsonController::class, 'index']);
     Route::get('AppaJson', [AppaJsonController::class, 'index']);
     Route::get('NewsJson', [NewsJsonController::class, 'index']);
     Route::get('AdviceJson', [AdviceJsonController::class, 'index']);
-    Route::get('createquestion/{title}/{question}', [AnswerController::class, 'createQuestion'])->name('createquestion');
+    Route::get('NewOgtaterJsonId', [AnswerController::class, 'newOgtater']);
+    Route::get('createquestion/{user_id}/{title}/{question}', [AnswerController::class, 'createQuestion'])->name('createquestion');
     Route::get('getAnswer/{id}', [AnswerController::class, 'getAnswer'])->name('getAnswer');
     Route::get('createCardPayment/{payment_card}/{payment_idram}/{adress}/{sum}/{end_of_term}', [CardController::class, 'createCardPayment'])->name('createCardPayment');
     Route::get('rulesJson', [RulesController::class, 'indexJson'])->name('rulesJson');
+    Route::get('numberAdressJson/{id}', [SpasarkumJsonController::class, 'numberAdress']);
+//IDRAM
+Route::get('payment/success', [\App\Http\Controllers\PaymentController::class, 'success']);
+Route::get('payment/error', [\App\Http\Controllers\PaymentController::class, 'error']);
 
 
 Auth::routes();

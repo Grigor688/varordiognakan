@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class EvakuatorController extends Controller
 {
     public function index(){
-        $spasarkum = Spasarkum::select('*')->where('name', 'Էվակուատոր')->get();
+        $spasarkum = Spasarkum::select('*')->where('name', 'Էվակուատոր')->get()->sortKeysDesc();
         return view('sos.evakuator',[
             'data'=>$spasarkum
         ]);

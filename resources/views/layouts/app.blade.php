@@ -196,20 +196,20 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="{{route('spasarkum')}}" class="nav-link">
-                                    <i class="nav-icon fas fa-th"></i>
-                                    <p>Սպասարկման կետ</p>
+                                    <i style="color: aqua;font-size: 21px" class="fab fa-battle-net"></i>
+                                    <p>&nbsp;&nbsp;&nbsp;Սպասարկման կետ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('partner')}}" class="nav-link">
-                                    <i class="nav-icon fas fa-chart-pie"></i>
-                                    <p>Գործընկեր</p>
+                                    &nbsp;<i style="color: cornflowerblue" class="fas fa-users"></i>
+                                    <p>&nbsp;&nbsp;Գործընկեր</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('ogtater')}}" class="nav-link">
-                                    <i class="nav-icon fas fa-columns"></i>
-                                    <p>Օգտատեր</p>
+                                    &nbsp;<i style="color: cornflowerblue" class="fas fa-user"></i>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Օգտատեր</p>
                                 </a>
                             </li>
                             <li class="nav-item">

@@ -20,11 +20,11 @@
 
                                 <thead>
                                 <th  data-sortable="true">#</th>
+                                <th  data-sortable="true">ԱՊՊԱ</th>
                                 <th  data-sortable="true">Անուն</th>
                                 <th  data-sortable="true">Ազգանուն</th>
                                 <th data-sortable="true" class="text-center">Հեռ․համար</th>
                                 <th  data-sortable="true">Ավտոմեքենայի համար</th>
-                                <th  data-sortable="true">ԱՊՊԱ</th>
                                 <th  data-sortable="true">Մեքենայի արտ․</th>
                                 <th  data-sortable="true">Տարեթիվ</th>
                                 <th  data-sortable="true">Մոդել</th>
@@ -41,11 +41,11 @@
 
                                     <tr>
                                         <th scope="col">{{$element->id}}</th>
+                                        <td scope="col">{{$element->appa}}</td>
                                         <td scope="col">{{$element->firstname}}</td>
                                         <td scope="col">{{$element->lastname}}</td>
                                         <td scope="col">{{$element->phone_number}}</td>
                                         <td scope="col">{{$element->car_number}}</td>
-                                        <td scope="col">{{$element->appa}}</td>
                                         <td scope="col">{{$element->car_company}}</td>
                                         <td scope="col">{{$element->car_year}}</td>
                                         <td scope="col">{{$element->car_model}}</td>

@@ -9,7 +9,7 @@ class OgtaterController extends Controller
 {
     public function index(){
        return view('ogtater.ogtater',[
-            'data'=>Ogtater::all()
+            'data'=>Ogtater::all()->sortKeysDesc()
         ]);
     }
 

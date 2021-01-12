@@ -9,7 +9,7 @@ class SosController extends Controller
 {
     public function index(){
         return view('sos.sos',[
-            'data'=>Ogtater::all()
+            'data'=>Ogtater::all()->sortKeysDesc()
         ]);
     }
 }

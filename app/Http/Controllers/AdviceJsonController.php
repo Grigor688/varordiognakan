@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class AdviceJsonController extends Controller
 {
     public function index(){
-        $advice = Advice::all();
+        $advice = Advice::orderBy('id','desc')->get();
         return json_encode($advice);
     }
 
     public function advice(){
-        $advice = Advice::all();
+        $advice = Advice::all()->sortKeysDesc();
         return view('advice.advice', ['data'=>$advice]);
     }
 
@@ -29,7 +29,7 @@ class AdviceJsonController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . "." . $extension;
-            $file->move('uploads/advice/', $filename);
+            $file->move('uploads/news/', $filename);
             $advice->image = $filename;
         }else{
             return $request;
@@ -61,7 +61,7 @@ class AdviceJsonController extends Controller
             $file = $req->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . "." . $extension;
-            $file->move('uploads/advice/', $filename);
+            $file->move('uploads/news/', $filename);
             $advice->image = $filename;
         }else{
             $advice = Advice::find($id);

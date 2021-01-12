@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PartnerController extends Controller
 {
     public function index(){
-        $spasarkum = Spasarkum::select('*')->where('partner', '1')->get();
+        $spasarkum = Spasarkum::select('*')->where('partner', '1')->get()->sortKeysDesc();
         return view('partner.partner', [
             'data' => $spasarkum
         ]);

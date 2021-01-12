@@ -120,9 +120,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="work_time_from" style="color: antiquewhite">Աշխատանքային ժամեր սկսած</label>
+                            <label for="work_time_from" style="color: #a2865f">Աշխատանքային ժամեր սկսած</label>
                             <input type="time" name="work_time_from" class="form-control" id="work_time_from" aria-describedby="emailHelp">
-                            <label for="work_time_to" style="color: antiquewhite">Աշխատանքային ժամեր մինչև</label>
+                            <label for="work_time_to" style="color: #a2865f">Աշխատանքային ժամեր մինչև</label>
                             <input type="time" name="work_time_to" class="form-control" id="work_time_to" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group" style="margin-bottom: -3px">
@@ -132,20 +132,20 @@
                             <span id="addDay" class="addDay">+</span>
                         </div>
                         <div id="hiddenSaturdayForm" class="form-group">
-                            <label for="saturday_work_time_from" style="color: antiquewhite">Աշխատանքային ժամեր սկսած</label>
+                            <label for="saturday_work_time_from" style="color: #a2865f">Աշխատանքային ժամեր սկսած</label>
                             <input type="time" name="saturday_work_time_from" class="form-control" id="saturday_work_time_from" aria-describedby="emailHelp">
-                            <label for="saturday_work_time_to" style="color: antiquewhite">Աշխատանքային ժամեր մինչև</label>
+                            <label for="saturday_work_time_to" style="color: #a2865f">Աշխատանքային ժամեր մինչև</label>
                             <input type="time" name="saturday_work_time_to" class="form-control" id="saturday_work_time_to" aria-describedby="emailHelp">
                         </div>
 
                         <div class="form-group">
                             <h5>Հատուկ առաջարկ</h5>
-                            <label style="color: antiquewhite">Հատուկ առաջարկի սկիզբ</label>
+                            <label style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
                             <input type="datetime-local" class="form-control changeInput" name="special_offer_time_from">
                             <br>
                             <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
                             <br>
-                            <label style="color: antiquewhite">Հատուկ առաջարկի ավարտ</label>
+                            <label style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
                             <input type="datetime-local" class="form-control changeInput" name="special_offer_time_to">
                         </div>
                         <div class="thumbnail">
