@@ -6,10 +6,12 @@
                 <div class="col-md-12">
                     <div class="card bootstrap-table">
                         <div class="card-body table-full-width">
-                            <span>
-                                <i class="fas fa-search"></i>
-                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել ID" title="Type in a name">
-                            </span>
+                            <div class="search">
+                               <span>
+                                    <i style="font-size: 13px" class="fas fa-search"></i>
+                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել ID" title="Type in a name">
+                                </span>
+                            </div>
                             <table id="myTable" class="table">
                                 @if(session('deleted'))
                                     <div class="alert sesionDivdel">
@@ -28,9 +30,9 @@
                                         <th  data-sortable="true">ID</th>
                                         <th  data-sortable="true">Վերնագիր</th>
                                         <th  data-sortable="true">Հարց</th>
-                                        <th data-sortable="true" class="text-center">Պատասխան</th>
-                                        <th data-sortable="true" class="text-center">Տարբերակում</th>
-                                        <th data-sortable="true" class="text-center">Մեկնաբանություն</th>
+                                        <th data-sortable="true">Պատասխան</th>
+                                        <th data-sortable="true">Տարբերակում</th>
+                                        <th data-sortable="true">Մեկնաբանություն</th>
                                         <th class="disabled-sorting text-right"></th>
                                     </tr>
                                 </thead>

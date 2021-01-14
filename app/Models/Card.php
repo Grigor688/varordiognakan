@@ -12,7 +12,9 @@ class Card extends Model
 
     public function getTest(){
         $day = $this->dateDiffInDays(date("Y-m-d"), $this->end_of_term);
-        if ($day <= 3){
+        if($day <0){
+            $color = 'white';
+        }elseif ($day <= 3){
             $color = 'red';
         }elseif ($day <= 10){
             $color = 'yellow';
@@ -29,7 +31,7 @@ class Card extends Model
 
         // 1 day = 24 hours
         // 24 * 60 * 60 = 86400 seconds
-        return abs(round($diff / 86400));
+        return (round($diff / 86400));
     }
 
 }

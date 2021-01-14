@@ -44,8 +44,8 @@
                                         @endif
                                         <td class='text-right'>
                                             <a href='{{route('updateCard', $element->id)}}' class='edit a_edit'><i style="color: inherit;font-size: 17px;" class='fas fa-eye'></i></a>
-                                            <a href='{{route('deleteCard', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
                                             <a href='{{route('updateCardEdit', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
+                                            <a href='{{route('deleteCard', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

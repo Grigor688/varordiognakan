@@ -17,7 +17,7 @@
                                     </div>
                                 @endif
                                 <span>
-                                    <i class="fas fa-search"></i>
+                                    <i style="font-size: 13px" class="fas fa-search"></i>
                                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել անվանումը" title="Type in a name">
                                 </span>
 
