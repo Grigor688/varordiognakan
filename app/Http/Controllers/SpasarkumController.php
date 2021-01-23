@@ -15,7 +15,18 @@ class SpasarkumController extends Controller
         ]);
     }
 
+    public function deleteImage($id){
+        Spasarkum::where(['id' => $id])->update(['image' => null]);
+        return redirect()->route('update',$id);
+    }
+
+    public function deleteImageSpecial($id){
+        Spasarkum::where(['id' => $id])->update(['special_offer_image' => null]);
+        return redirect()->route('update',$id);
+    }
+
     public function submit(Request $req){
+
         $validatedData = $req->validate([
             'number_adress' => 'required|integer|unique:spasarkums',
 
@@ -37,9 +48,10 @@ class SpasarkumController extends Controller
         $spasarkum->adress = $req->input('adress');
         $spasarkum->number_adress = $req->input('number_adress');
         $spasarkum->partner = $req->input('partner');
-        $spasarkum->special_offer = $req->input('special_offer');
-        $spasarkum->special_offer_time_from = $req->input('special_offer_time_from');
-        $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
+        $spasarkum->special_offer = $req->special_offer;
+        $spasarkum->special_offer_title = $req->input('special_offer_title');
+        $spasarkum->special_offer_time_from = $req->special_offer_time_from;
+        $spasarkum->special_offer_time_to = $req->special_offer_time_to;
         $spasarkum->orientation = $req->input('orientation');
         $spasarkum->title_orientation = $req->input('title_orientation');
         $spasarkum->lat = $req->input('lat');
@@ -51,37 +63,22 @@ class SpasarkumController extends Controller
             $filename = time() . "." . $extension;
             $file->move('uploads/news/', $filename);
             $spasarkum->image = $filename;
-        }else{
-            $spasarkum = new Spasarkum();
-            $spasarkum->name_company = $req->input('name_company');
-            $spasarkum->name = $req->input('name');
-            $spasarkum->activity = $req->input('activity');
-            $spasarkum->work_day_from = $req->input('work_day_from');
-            $spasarkum->work_day_to = $req->input('work_day_to');
-            $spasarkum->work_time_from = $req->input('work_time_from');
-            $spasarkum->work_time_to = $req->input('work_time_to');
-            $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
-            $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
-            $spasarkum->phone_number = $req->input('phone_number');
-            $spasarkum->email = $req->input('email');
-            $spasarkum->site = $req->input('site');
-            $spasarkum->adress = $req->input('adress');
-            $spasarkum->number_adress = $req->input('number_adress');
-            $spasarkum->partner = $req->input('partner');
-            $spasarkum->special_offer = $req->input('special_offer');
-            $spasarkum->special_offer_time_from = $req->input('special_offer_time_from');
-            $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
-            $spasarkum->orientation = $req->input('orientation');
-            $spasarkum->title_orientation = $req->input('title_orientation');
-            $spasarkum->lat = $req->input('lat');
-            $spasarkum->lng = $req->input('lng');
+        }
+        if ($req->hasfile('special_offer_image')){
+            $file = $req->file('special_offer_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/news/', $filename);
+            $spasarkum->special_offer_image = $filename;
         }
 
+//        dd($spasarkum);
         $spasarkum->save();
         return redirect()->route('addForm')->with('success','Հաջողությամբ ավելացվել է');
     }
 
     public function allData(){
+//        dd(auth()->user());
         return view('spasarkum.spasarkum',['data'=>Spasarkum::all()->sortKeysDesc()]);
     }
 
@@ -112,7 +109,7 @@ class SpasarkumController extends Controller
     }
 
 
-    public function updateForm($id, Request $req){
+        public function updateForm($id, Request $req){
         $spasarkum = Spasarkum::find($id);
         $spasarkum->name_company = $req->input('name_company');
         $spasarkum->name = $req->input('name');
@@ -130,6 +127,7 @@ class SpasarkumController extends Controller
         $spasarkum->number_adress = $req->input('number_adress');
         $spasarkum->partner = $req->input('partner');
         $spasarkum->special_offer = $req->input('special_offer');
+        $spasarkum->special_offer_title = $req->input('special_offer_title');
         $spasarkum->special_offer_time_from = $req->input('special_offer_time_from');
         $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
         $spasarkum->orientation = $req->input('orientation');
@@ -143,7 +141,13 @@ class SpasarkumController extends Controller
             $filename = time() . "." . $extension;
             $file->move('uploads/news/', $filename);
             $spasarkum->image = $filename;
-        }else{
+        }elseif ($req->hasfile('special_offer_image')){
+                $file = $req->file('special_offer_image');
+                $extension = $file->getClientOriginalExtension();
+                $filename = time() . "." . $extension;
+                $file->move('uploads/news/', $filename);
+                $spasarkum->special_offer_image = $filename;
+            }else{
 //            return $req;
 //            $spasarkum->image = "";
             $spasarkum = Spasarkum::find($id);
@@ -163,6 +167,7 @@ class SpasarkumController extends Controller
             $spasarkum->number_adress = $req->input('number_adress');
             $spasarkum->partner = $req->input('partner');
             $spasarkum->special_offer = $req->input('special_offer');
+            $spasarkum->special_offer_title = $req->input('special_offer_title');
             $spasarkum->special_offer_time_from = $req->input('special_offer_time_from');
             $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
             $spasarkum->orientation = $req->input('orientation');

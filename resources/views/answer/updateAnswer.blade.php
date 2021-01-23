@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <form action="{{route('updateFormAnswer', $data->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="container">
@@ -34,4 +35,11 @@
             </div>
         </div>
     </form>
+@endsection
+@section('content6')
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 @endsection

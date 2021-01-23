@@ -7,7 +7,7 @@
 
     <title>Admin</title>
     @yield('content4')
-    <link rel="stylesheet" href="/css/app.css?id">
+    <link rel="stylesheet" href="/css/app.css?abs">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Font Awesome Icons -->
@@ -200,12 +200,12 @@
                                     <p>&nbsp;&nbsp;&nbsp;Սպասարկման կետ</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{route('partner')}}" class="nav-link">
-                                    &nbsp;<i style="color: cornflowerblue" class="fas fa-users"></i>
-                                    <p>&nbsp;&nbsp;Գործընկեր</p>
-                                </a>
-                            </li>
+                            {{--<li class="nav-item">--}}
+                                {{--<a href="{{route('partner')}}" class="nav-link">--}}
+                                    {{--&nbsp;<i style="color: cornflowerblue" class="fas fa-users"></i>--}}
+                                    {{--<p>&nbsp;&nbsp;Գործընկեր</p>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
                             <li class="nav-item">
                                 <a href="{{route('ogtater')}}" class="nav-link">
                                     &nbsp;<i style="color: cornflowerblue" class="fas fa-user"></i>
@@ -251,13 +251,19 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('card')}}" class="nav-link">
-                                    <i class="nav-icon fas fa-book" style="color: cornflowerblue">
-                                        <span class="messageCount">{{$count}}</span>
-                                    </i>
-                                    <p>Քարտային վճարում</p>
+                                <a href="{{route('vcharumner')}}" class="nav-link">
+                                    <i class="nav-icon fas fa-book" style="color: cornflowerblue"></i>
+                                    <p>Վճարումներ</p>
                                 </a>
                             </li>
+                            {{--<li class="nav-item">--}}
+                                {{--<a href="{{route('idram')}}" class="nav-link">--}}
+                                    {{--<i class="nav-icon fas fa-book" style="color: darkorchid">--}}
+                                        {{--<span class="messageCount">{{$idramcount}}</span>--}}
+                                    {{--</i>--}}
+                                    {{--<p>Idram</p>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
                         </ul>
                     </li>
                 </ul>
@@ -286,7 +292,7 @@
 <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/dist/js/adminlte.min.js"></script>
-<script src="/js/form.js"></script>
+<script src="/js/form.js?id"></script>
 <!---MAP JS--------->
 @yield('content6')
 </body>

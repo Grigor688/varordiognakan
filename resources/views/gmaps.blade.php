@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -155,5 +156,11 @@
                 {{--.setLngLat([{{$el->lng}}, {{$el->lat}}])--}}
                 {{--.addTo(map);--}}
         {{--@endforeach--}}
+        function goBack() {
+            window.history.back();
+        }
     </script>
 @endsection
+
+
+

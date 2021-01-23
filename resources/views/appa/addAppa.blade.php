@@ -11,6 +11,7 @@
     @endif
 @endsection
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     @if(session('success'))
         <div class="alert alert-success sesionDiv">
             {{session('success')}}
@@ -40,6 +41,13 @@
             </div>
         </div>
     </form>
+@endsection
+@section('content6')
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 @endsection
 
 

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <form action="{{route('updateForm',$data->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="container">
@@ -15,23 +16,23 @@
                             <select name="name" id="name" class="form-control">
                                 <option>Էվակուատոր</option>
                                 <option>Շարժական Վուլկանացում</option>
-                                <option>Ավտոտեխսպասարկման կետ</option>
-                                <option>Վուլկանացում</option>
                                 <option>Ավտոլվացում</option>
+                                <option>Վուլկանացում </option>
                                 <option>Լվա ինքդ</option>
+                                <option>Յուղման կետ</option>
+                                <option>Ավտոտեխսպասարկման կետ</option>
                                 <option>Էլեկտրիկ</option>
                                 <option>Մատորիստ</option>
                                 <option>Խադավիկ</option>
                                 <option>Դզող-փչող</option>
                                 <option>Գազավիկ</option>
-                                <option>Ապակիների մգեցում</option>
-                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
+                                <option>Պլաստմասե իրերի վերանորգում</option>
                                 <option>Մեքենաների քանդման կետեր</option>
-                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
-                                <option>Մեքենայի պլաստմասե իրերի վերանորգում</option>
                                 <option>Ռադիատորի վերանորոգում</option>
                                 <option>Կոնդիցիոների լիցքավորում</option>
-                                <option>Յուղման կետ</option>
+                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
+                                <option>Ապակիների թաղանթապատում</option>
+                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -69,8 +70,9 @@
                         <div class="form-group">
                             <label for="partner">Գործընկեր</label>
                             <select name="partner" id="partner" class="form-control">
-                                <option value="1">1</option>
-                                <option value="0">0</option>
+                                <option></option>
+                                <option value="Այո" @if($data->partner == 'Այո') selected @endif>Այո</option>
+                                <option value="Ոչ" @if($data->partner == 'Ոչ') selected @endif>Ոչ</option>
                             </select>
                         </div>
                     </div>
@@ -120,27 +122,51 @@
                                 </div>
 
                         @endif
-                        @if($data->image)
+                        @if($data->partner == 'Այո')
                         <div class="form-group">
                             <h5>Հատուկ առաջարկ</h5>
-                            <label style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
-                            <input type="datetime-local" class="form-control" name="special_offer_time_from" value="{{$data->special_offer_time_from}}">
+                            <label style="color: #a2865f">Հատուկ առաջարկի վերնագիր</label>
+                            <input type="text" name="special_offer_title" class="form-control" value="{{$data->special_offer_title}}">
+                            @if($data->special_offer_image)
+                                <div style="width: 249px;height: 205px;position: relative">
+                                    <a href="{{route('deleteImageSpecial', $data->id)}}">
+                                        <span class="deleteImage">X</span>
+                                    </a>
+                                    <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$data->special_offer_image}}">
+                                </div>
+                            @else
+
+                            @endif
+                            <input type="file" name="special_offer_image" class="form-control">
                             <br>
-                                <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp">{{$data->special_offer}}</textarea>
+                            <label style="color: #a2865f">Հատուկ առաջարկ</label>
+                            <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp">{{$data->special_offer}}</textarea>
+                            <label for="special_offer_time_from" style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
+                            <input type="datetime-local" id="special_offer_time_from" class="form-control" name="special_offer_time_from" value="{{$data->special_offer_time_from}}">
                             <br>
-                            <label style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
+                            <label  style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
                             <input type="datetime-local" class="form-control" name="special_offer_time_to" value="{{$data->special_offer_time_to}}">
                         </div>
                         <div class="thumbnail">
                             <label>Ուղղվածություն</label>
-                            <div style="width: 249px;height: 205px;">
-                                <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$data->image}}">
-                            </div>
+                            @if($data->image)
+                                <div style="width: 249px;height: 205px;position: relative">
+                                    <a href="{{route('deleteImage', $data->id)}}">
+                                        <span class="deleteImage">X</span>
+                                    </a>
+                                    <img style="width: 100%;height: 100%;border-radius: 12px" src="/uploads/news/{{$data->image}}">
+                                </div>
+                            @else
+
+                            @endif
+
                             <div class="caption">
                                 <input type="file" name="image" class="form-control">
                                 <br>
+                                <label style="color: #a2865f">Ուղղվածության վերնագիր</label>
                                 <input type="text" name="title_orientation" class="form-control" value="{{$data->title_orientation}}">
                                 <br>
+                                <label style="color: #a2865f">Բովանդակություն</label>
                                 <textarea  name="orientation" class="form-control" id="orientation" aria-describedby="emailHelp">{{$data->orientation}}</textarea>
                             </div>
                         </div>
@@ -153,4 +179,11 @@
             </div>
         </div>
     </form>
+@endsection
+@section('content6')
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 @endsection

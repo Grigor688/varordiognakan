@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#partner').change(function(){
         var value = $(this).val()
-        if(value == 0){
+        if(value == "Ոչ"){
             $(".changeInput").prop("disabled",true);
         }else{
             $(".changeInput").prop("disabled",false);

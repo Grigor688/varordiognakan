@@ -18,6 +18,7 @@ use App\Http\Controllers\AdviceJsonController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\RulesController;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\PaymentController;
 
 
 
@@ -44,6 +45,8 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('update/{id}', [SpasarkumController::class, 'update'])->name('update');
     Route::post('update/{id}', [SpasarkumController::class, 'updateForm'])->name('updateForm');
     Route::get('serviceMap/{id}', [SpasarkumController::class, 'serviceMap'])->name('serviceMap');
+    Route::get('deleteImage/{id}', [SpasarkumController::class, 'deleteImage'])->name('deleteImage');
+    Route::get('deleteImageSpecial/{id}', [SpasarkumController::class, 'deleteImageSpecial'])->name('deleteImageSpecial');
 //PARTNER
     Route::get('partner', [PartnerController::class, 'index'])->name('partner');
     Route::get('updatePartner/{id}', [PartnerController::class, 'updatePartner'])->name('updatePartner');
@@ -112,9 +115,17 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('updateCard/{id}', [CardController::class, 'updateCard'])->name('updateCard');
     Route::get('updateCardEdit/{id}', [CardController::class, 'updateCardEdit'])->name('updateCardEdit');
     Route::post('updateCardEditForm/{id}', [CardController::class, 'updateCardEditForm'])->name('updateCardEditForm');
+//IDRAM
+    Route::get('idram', [PaymentController::class, 'idramView'])->name('idram');
+    Route::get('updateIdram/{id}', [PaymentController::class, 'updateIdram'])->name('updateIdram');
+    Route::get('deleteIdram/{id}', [PaymentController::class, 'deleteIdram'])->name('deleteIdram');
+    Route::get('updateIdramEdit/{id}', [PaymentController::class, 'updateIdramEdit'])->name('updateIdramEdit');
+    Route::post('updateIdramEditForm/{id}', [PaymentController::class, 'updateIdramEditForm'])->name('updateIdramEditForm');
+    Route::get('vcharumner', [PaymentController::class, 'vcharumner'])->name('vcharumner');
 
 
 });
+
 //API Linker
     Route::get('serviceJson/{service}', [SpasarkumJsonController::class, 'index']);
     Route::get('vulcanizationJson', [VulkanacumJsonController::class, 'index']);
@@ -126,12 +137,16 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('NewOgtaterJsonId', [AnswerController::class, 'newOgtater']);
     Route::get('createquestion/{user_id}/{title}/{question}', [AnswerController::class, 'createQuestion'])->name('createquestion');
     Route::get('getAnswer/{id}', [AnswerController::class, 'getAnswer'])->name('getAnswer');
-    Route::get('createCardPayment/{payment_card}/{payment_idram}/{adress}/{sum}/{end_of_term}', [CardController::class, 'createCardPayment'])->name('createCardPayment');
+    Route::get('createCardPayment/{payment_card}/{number_adress}/{sum}/{end_of_term}', [CardController::class, 'createCardPayment'])->name('createCardPayment');
+    Route::get('/orderStatus', [CardController::class, 'orderStatus'])->name('orderStatus');
     Route::get('rulesJson', [RulesController::class, 'indexJson'])->name('rulesJson');
     Route::get('numberAdressJson/{id}', [SpasarkumJsonController::class, 'numberAdress']);
-//IDRAM
-Route::get('payment/success', [\App\Http\Controllers\PaymentController::class, 'success']);
-Route::get('payment/error', [\App\Http\Controllers\PaymentController::class, 'error']);
+    Route::get('idramPayment/{id}', [PaymentController::class, 'numberAdressJsson']);
+
+    //IDRAM
+    Route::get('payment/success', [\App\Http\Controllers\PaymentController::class, 'success']);
+    Route::get('payment/error', [\App\Http\Controllers\PaymentController::class, 'error']);
+
 
 
 Auth::routes();

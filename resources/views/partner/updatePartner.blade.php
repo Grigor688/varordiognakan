@@ -13,20 +13,25 @@
                         <div class="form-group">
                             <label for="name">Մասնագիտացում</label>
                             <select name="name" id="name" class="form-control">
+                                <option>Էվակուատոր</option>
+                                <option>Շարժական Վուլկանացում</option>
+                                <option>Ավտոլվացում</option>
+                                <option>Վուլկանացում </option>
+                                <option>Լվա ինքդ</option>
+                                <option>Յուղման կետ</option>
                                 <option>Ավտոտեխսպասարկման կետ</option>
-                                <option>Էլեկտրիկ/դիագնոստիկա</option>
+                                <option>Էլեկտրիկ</option>
                                 <option>Մատորիստ</option>
-                                <option>Վուլկանացում</option>
-                                <option>Ընթացագործ</option>
-                                <option>Գազավիկներ</option>
-                                <option>Թիթեղագործ/ներկարար</option>
-                                <option>(Լվա ինքդ)/ լվացման կետ</option>
+                                <option>Խադավիկ</option>
+                                <option>Դզող-փչող</option>
+                                <option>Գազավիկ</option>
+                                <option>Պլաստմասե իրերի վերանորգում</option>
                                 <option>Մեքենաների քանդման կետեր</option>
-                                <option>Մեքենայի փայլեցում/ապակիների մգեցում</option>
-                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
-                                <option>Մեքենայի պլաստմասե իրերի վերանորգում</option>
                                 <option>Ռադիատորի վերանորոգում</option>
-                                <option>Յուղման կետ/կոնդիցիոների լիցքավորում</option>
+                                <option>Կոնդիցիոների լիցքավորում</option>
+                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
+                                <option>Ապակիների թաղանթապատում</option>
+                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
                             </select>
                         </div>
                         <div class="form-group">

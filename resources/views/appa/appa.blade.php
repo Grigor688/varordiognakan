@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -50,4 +51,11 @@
         </div>
     </div>
 
+@endsection
+@section('content6')
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 @endsection

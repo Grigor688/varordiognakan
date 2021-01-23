@@ -22,8 +22,15 @@
                                     </div>
                                 @endif
                                 <span>
-                                    <i style="font-size: 13px" class="fas fa-search"></i>
-                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել անվանումը" title="Type in a name">
+                                    <input style="margin-left: 16px" type="text" id="myInput3" onkeyup="myFunction3()" placeholder=" Փնտրել ID" title="Type in a name">
+                                    <input style="margin-left: 16px" type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել անվանումը" title="Type in a name">
+                                     <input style="margin-left: 16px" type="text" id="myInput2" onkeyup="myFunction2()" placeholder=" Փնտրել թվային հասցեով" title="Type in a name">
+                                     <select style="height: 30px;margin-left: 17px" id="myInput4" onchange="myFunction4()" title="Type in a name">
+                                         <option>Գործընկեր</option>
+                                         <option value="Այո">Այո</option>
+                                     <option value="Ոչ">Ոչ</option>
+                                     </select>
+
                                 </span>
                                 <thead>
                                     <th  data-sortable="true">#</th>
@@ -56,7 +63,7 @@
                                     @foreach($data as $element)
 
                                     <tr>
-                                    <th scope="col">{{$element->id}}</th>
+                                    <td scope="col">{{$element->id}}</td>
                                     <td class='text-right'>
                                         <a href='{{route('serviceMap', $element->id)}}' class='btn btn-link btn-succes edit a_edit'><i class="fa fa-globe" aria-hidden="true"></i></a>
                                     </td>
@@ -74,7 +81,8 @@
                                     <td scope="col">{{$element->site}}</td>
                                     <td scope="col">{{$element->adress}}</td>
                                     <td scope="col">{{$element->number_adress}}</td>
-                                    <td scope="col">{{$element->getStatus($element->partner)}}</td>
+{{--                                    <td scope="col">{{$element->getStatus($element->partner)}}</td>--}}
+                                    <td scope="col">{{$element->partner}}</td>
                                     <td scope="col">{{$element->special_offer_time_from}}</td>
                                     <td scope="col">{{$element->special_offer_time_to}}</td>
                                     <td scope="col">{{$element->special_offer}}</td>
@@ -83,8 +91,10 @@
                                     <td scope="col">{{$element->lat}}</td>
                                     <td scope="col">{{$element->lng}}</td>
                                     <td class='text-right'>
-                                        <a href='{{route('update', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
-                                        <a href='{{route('delete', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
+                                        @if(auth()->user()->is_admin == 1)
+                                            <a href='{{route('update', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
+                                            <a href='{{route('delete', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
+                                        @endif
                                     </td>
                                     </tr>
 
@@ -101,14 +111,14 @@
     @endsection
 @section('content6')
     <script>
-        function myFunction() {
+        function myFunction3() {
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
+            input = document.getElementById("myInput3");
             filter = input.value.toUpperCase();
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
+                td = tr[i].getElementsByTagName("td")[0];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -119,5 +129,63 @@
                 }
             }
         }
+
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function myFunction2() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput2");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[15];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function myFunction4() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput4");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[16];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
     </script>
 @endsection

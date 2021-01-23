@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="form-group">
         <div class="form-group">
             @if(session('deleted'))
@@ -42,8 +43,15 @@
                 <button style="width: 108px;height: 31px;padding: 3px" id="send-mail-list" class="form-control btn-primary">Ավելացնել</button>
             </a>
         </div>
-
+    </div>
     </div>
 
 
+@endsection
+@section('content6')
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
 @endsection

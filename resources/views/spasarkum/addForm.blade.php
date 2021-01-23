@@ -11,6 +11,7 @@
     @endif
 @endsection
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     @if(session('success'))
         <div class="alert alert-success sesionDiv">
             {{session('success')}}
@@ -31,23 +32,23 @@
                             <select name="name" id="name" class="form-control">
                                 <option>Էվակուատոր</option>
                                 <option>Շարժական Վուլկանացում</option>
-                                <option>Ավտոտեխսպասարկման կետ</option>
-                                <option>Վուլկանացում</option>
                                 <option>Ավտոլվացում</option>
+                                <option>Վուլկանացում </option>
                                 <option>Լվա ինքդ</option>
+                                <option>Յուղման կետ</option>
+                                <option>Ավտոտեխսպասարկման կետ</option>
                                 <option>Էլեկտրիկ</option>
                                 <option>Մատորիստ</option>
                                 <option>Խադավիկ</option>
                                 <option>Դզող-փչող</option>
                                 <option>Գազավիկ</option>
-                                <option>Ապակիների մգեցում</option>
-                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
+                                <option>Պլաստմասե իրերի վերանորգում</option>
                                 <option>Մեքենաների քանդման կետեր</option>
-                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
-                                <option>Մեքենայի պլաստմասե իրերի վերանորգում</option>
                                 <option>Ռադիատորի վերանորոգում</option>
                                 <option>Կոնդիցիոների լիցքավորում</option>
-                                <option>Յուղման կետ</option>
+                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
+                                <option>Ապակիների թաղանթապատում</option>
+                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -87,8 +88,8 @@
                             <label for="partner">Գործընկեր</label>
                             <select name="partner" id="partner" class="form-control">
                                 <option></option>
-                                <option value="1">1</option>
-                                <option value="0">0</option>
+                                <option value="Այո">Այո</option>
+                                <option value="Ոչ">Ոչ</option>
                             </select>
                         </div>
                     </div>
@@ -140,21 +141,28 @@
 
                         <div class="form-group">
                             <h5>Հատուկ առաջարկ</h5>
-                            <label style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
-                            <input type="datetime-local" class="form-control changeInput" name="special_offer_time_from">
+                            <label style="color: #a2865f">Հատուկ առաջարկի վերնագիր</label>
+                            <input type="text" name="special_offer_title" class="form-control" placeholder="Գրեք հատուկ առաջարկի վերնագիր">
                             <br>
+                            <input type="file" name="special_offer_image" class="form-control changeInput">
+                            <label style="color: #a2865f">Հատուկ առաջարկ</label>
                             <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
                             <br>
-                            <label style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
-                            <input type="datetime-local" class="form-control changeInput" name="special_offer_time_to">
+                            <label for ="special_offer_time_from" style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
+                            <input type="datetime-local" value="{{date('Y-m-d\TH:i:s',strtotime(date("Y-m-d\TH:i:s") . "+1 days"))}}" id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_from">
+                            <br>
+                            <label for ="special_offer_time_to" style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
+                            <input type="datetime-local" value="{{date('Y-m-d\TH:i:s',strtotime(date("Y-m-d\TH:i:s") . "+1 days"))}}" id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_to">
                         </div>
                         <div class="thumbnail">
                             <label>Ուղղվածություն</label>
                             <div class="caption">
                                 <input type="file" name="image" class="form-control changeInput">
                                 <br>
+                                <label style="color: #a2865f">Ուղղվածության վերնագիր</label>
                                 <input type="text" name="title_orientation" class="form-control changeInput" placeholder="Գրեք ուղղվածության վերնագիրը">
                                 <br>
+                                <label style="color: #a2865f">Բովանդակություն</label>
                                 <textarea  name="orientation" class="form-control changeInput" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք Ուղղվածությունը"></textarea>
                             </div>
                         </div>
@@ -165,6 +173,13 @@
             </div>
         </div>
     </form>
+@endsection
+@section('content6')
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 @endsection
 
 

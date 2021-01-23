@@ -17,8 +17,8 @@
                                     </div>
                                 @endif
                                 <span>
-                                    <i style="font-size: 13px" class="fas fa-search"></i>
                                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել անվանումը" title="Type in a name">
+                                    <i style="font-size: 13px" class="fas fa-search"></i>
                                 </span>
 
                                 <thead>
@@ -80,8 +80,10 @@
                                         <td scope="col">{{$element->lat}}</td>
                                         <td scope="col">{{$element->lng}}</td>
                                         <td class='text-right'>
-                                            <a href='{{route('updatePartner', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
-                                            <a href='{{route('deletePartner', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
+                                            @if(auth()->user()->is_admin == 1)
+                                                <a href='{{route('update', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
+                                                <a href='{{route('delete', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

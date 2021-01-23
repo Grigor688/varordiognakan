@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -8,8 +9,8 @@
                         <div class="card-body table-full-width">
                             <div class="search">
                                <span>
-                                    <i style="font-size: 13px" class="fas fa-search"></i>
                                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել ID" title="Type in a name">
+                                    <i style="font-size: 13px" class="fas fa-search"></i>
                                 </span>
                             </div>
                             <table id="myTable" class="table">
@@ -22,9 +23,6 @@
                                         {{session('updated')}}
                                     </div>
                                 @endif
-
-
-
                                 <thead>
                                     <tr>
                                         <th  data-sortable="true">ID</th>
@@ -86,6 +84,9 @@
                     }
                 }
             }
+        }
+        function goBack() {
+            window.history.back();
         }
     </script>
 @endsection

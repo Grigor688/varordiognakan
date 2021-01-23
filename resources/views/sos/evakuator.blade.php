@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -73,7 +74,7 @@
                                         <td scope="col">{{$element->site}}</td>
                                         <td scope="col">{{$element->adress}}</td>
                                         <td scope="col">{{$element->number_adress}}</td>
-                                        <td scope="col">{{$element->getStatus($element->partner)}}</td>
+                                        <td scope="col">{{$element->partner}}</td>
                                         <td scope="col">{{$element->special_offer_time_from}}</td>
                                         <td scope="col">{{$element->special_offer_time_to}}</td>
                                         <td scope="col">{{$element->special_offer}}</td>
@@ -95,5 +96,11 @@
             </div>
         </div>
     </div>
-
+@endsection
+@section('content6')
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 @endsection
