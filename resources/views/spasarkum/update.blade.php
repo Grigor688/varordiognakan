@@ -148,7 +148,7 @@
                             <input type="datetime-local" class="form-control" name="special_offer_time_to" value="{{$data->special_offer_time_to}}">
                         </div>
                         <div class="thumbnail">
-                            <label>Ուղղվածություն</label>
+                            <label>Առավելություն</label>
                             @if($data->image)
                                 <div style="width: 249px;height: 205px;position: relative">
                                     <a href="{{route('deleteImage', $data->id)}}">
@@ -163,7 +163,7 @@
                             <div class="caption">
                                 <input type="file" name="image" class="form-control">
                                 <br>
-                                <label style="color: #a2865f">Ուղղվածության վերնագիր</label>
+                                <label style="color: #a2865f">Առավելության վերնագիր</label>
                                 <input type="text" name="title_orientation" class="form-control" value="{{$data->title_orientation}}">
                                 <br>
                                 <label style="color: #a2865f">Բովանդակություն</label>

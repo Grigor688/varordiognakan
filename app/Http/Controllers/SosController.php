@@ -12,4 +12,9 @@ class SosController extends Controller
             'data'=>Ogtater::all()->sortKeysDesc()
         ]);
     }
+
+    public function sosGoogle($id){
+        $data = Ogtater::find($id);
+        return view('sos.location', ['data'=>$data]);
+    }
 }

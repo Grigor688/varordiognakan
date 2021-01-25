@@ -155,15 +155,15 @@
                             <input type="datetime-local" value="{{date('Y-m-d\TH:i:s',strtotime(date("Y-m-d\TH:i:s") . "+1 days"))}}" id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_to">
                         </div>
                         <div class="thumbnail">
-                            <label>Ուղղվածություն</label>
+                            <label>Առավելություն</label>
                             <div class="caption">
                                 <input type="file" name="image" class="form-control changeInput">
                                 <br>
-                                <label style="color: #a2865f">Ուղղվածության վերնագիր</label>
-                                <input type="text" name="title_orientation" class="form-control changeInput" placeholder="Գրեք ուղղվածության վերնագիրը">
+                                <label style="color: #a2865f">Առավելության վերնագիր</label>
+                                <input type="text" name="title_orientation" class="form-control changeInput" placeholder="Գրեք առավելության վերնագիրը">
                                 <br>
                                 <label style="color: #a2865f">Բովանդակություն</label>
-                                <textarea  name="orientation" class="form-control changeInput" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք Ուղղվածությունը"></textarea>
+                                <textarea  name="orientation" class="form-control changeInput" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք առավելությունը"></textarea>
                             </div>
                         </div>
                         <br>

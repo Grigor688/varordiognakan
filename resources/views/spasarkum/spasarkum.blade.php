@@ -53,8 +53,8 @@
                                     <th  data-sortable="true">Առաջարկի սկիզբ</th>
                                     <th  data-sortable="true">Առաջարկի ավարտ</th>
                                     <th  data-sortable="true">Հատուկ առաջարկ</th>
-                                    <th  data-sortable="true">Ուղղվածության վերնագիր</th>
-                                    <th  data-sortable="true">Ուղղվածություն</th>
+                                    <th  data-sortable="true">Առավելության վերնագիր</th>
+                                    <th  data-sortable="true">Առավելություն</th>
                                     <th  data-sortable="true">Latitude</th>
                                     <th  data-sortable="true">Longitude</th>
                                     <th class="disabled-sorting text-right"></th>

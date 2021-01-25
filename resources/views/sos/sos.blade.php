@@ -44,6 +44,7 @@
                                     <tr>
                                         <th scope="col">{{$element->id}}</th>
                                         <td class='text-right'>
+                                            <a href='{{route('sosGoogle', $element->id)}}' class='edit a_edit'><i style="color: inherit;font-size: 17px;" class='fas fa-eye'></i></a>
                                             <a href='{{route('google', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
                                             <a href='#' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
                                         </td>

@@ -60,6 +60,7 @@ Route::group(["middleware" => "auth"], function(){
 //SOS
     Route::get('sos',[SosController::class, 'index'])->name('sos');
     Route::get('gmaps/{id}',[HomeController::class, 'gmaps'])->name('google');
+    Route::get('sosGoogle/{id}',[SosController::class, 'sosGoogle'])->name('sosGoogle');
 //EVAKUATOR
     Route::get('evakuator',[EvakuatorController::class, 'index'])->name('evakuator');
     Route::get('addevakuator',[EvakuatorController::class, 'addForm'])->name('addevakuator');

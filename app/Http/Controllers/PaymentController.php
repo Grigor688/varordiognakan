@@ -73,6 +73,7 @@ class PaymentController extends Controller
         $idram = BuyModel::find($id);
         $idram->comment = $req->input('comment');
         $idram->end_of_term = $req->input('end_of_term');
+        $idram->pay = $req->input('pay');
         $idram->save();
         return redirect()->route('idram',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }
