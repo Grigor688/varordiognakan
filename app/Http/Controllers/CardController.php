@@ -8,10 +8,12 @@ use Carbon\Carbon;
 
 class CardController extends Controller
 {
-    private $userName_test = "webex_test";
-    private $password_test = "webex_new";
-    private $apiRegister_test = 'https://ipaytest.arca.am:8445/payment/rest/register.do';
-    private $apiGetStatus_test = 'https://ipaytest.arca.am:8445/payment/rest/getOrderStatusExtended.do';
+    private $userName_test = "34545018_api";
+    private $password_test = "autohelp2021";
+    private $apiRegister_test = 'https://ipay.arca.am/payment/rest/register.do';
+//    private $apiRegister_test = 'https://ipaytest.arca.am:8445/payment/rest/register.do';
+//    private $apiGetStatus_test = 'https://ipaytest.arca.am:8445/payment/rest/getOrderStatusExtended.do';
+    private $apiGetStatus_test = 'https://ipay.arca.am/payment/rest/getOrderStatusExtended.do';
 
 //    public $userName = $userName_test;
 //    public $password = $password_test;
@@ -19,6 +21,11 @@ class CardController extends Controller
     public function index(){
         $card = Card::all()->sortKeysDesc();
         return view('card.card',['data'=>$card]);
+    }
+
+    public function getCard($id){
+        $card = Card::where(['user_id' => $id])->get(['user_id','payment_card', 'number_adress', 'sum', 'end_of_term','pay']);
+        return json_encode($card);
     }
 
     public function deleteCard($id){
@@ -33,6 +40,7 @@ class CardController extends Controller
         $card = Card::find($id);
         $card->end_of_term = $req->input('end_of_term');
         $card->comment = $req->input('comment');
+        $card->pay = $req->input('pay');
         $card->save();
         return redirect()->route('card',$id)->with('updated','Հաջողությամբ փոփոխվել է');
     }
@@ -44,7 +52,7 @@ class CardController extends Controller
         return redirect()->route('card');
     }
 
-    public function createCardPayment(Request $request, $payment_card,$number_adress, $sum, $end_of_term){
+    public function createCardPayment(Request $request, $user_id,$payment_card,$number_adress, $sum, $end_of_term){
 //        051-haykakan dram
         $amount = $sum ?? 50000;
         $acba_amount = $amount * 100;
@@ -53,11 +61,12 @@ class CardController extends Controller
         # making here
         $orderNumber = Str::random(32);
         $returnUrl = route('orderStatus') . "?orderNumber=$orderNumber";
+        $jsonParams = urlencode(json_encode(["number_adress" => $number_adress]));
 
         $queryString = "userName={$this->userName_test}&password={$this->password_test}";
         $queryString .= "&amount={$acba_amount}&currency={$currency}";
         $queryString .= "&orderNumber={$orderNumber}";
-        $queryString .= "&returnUrl={$returnUrl}";
+        $queryString .= "&returnUrl={$returnUrl}&jsonParams={$jsonParams}";
 
         // return response()->json(['all'=>[$request->all(),'queryString'=>$queryString ]]);
         $curl_options = array(
@@ -87,11 +96,13 @@ class CardController extends Controller
             // 1. save order to db.
             // 2. return formUrl
             $payment = new Card;
+            $payment->user_id = $user_id;
             $payment->sum = $amount;
             $payment->order_number = $orderNumber;
             $payment->number_adress = $number_adress;
             $payment->end_of_term = $end_of_term;
             $payment->payment_card = $payment_card;
+//            $payment->pay = '1';
             $payment->save();
 
 
@@ -100,6 +111,7 @@ class CardController extends Controller
 
         if (!empty($payment_card) && !empty($number_adress) && !empty($sum) && !empty($end_of_term)){
             $card = new Card();
+            $card->user_id = $user_id;
             $card->payment_card = $payment_card;
             $card->number_adress = $number_adress;
             $card->sum = $sum;
@@ -152,8 +164,8 @@ class CardController extends Controller
 
                 # save status = 1 [===0 -> first visit]
                 # preapre success
-                if ($payment->status === 0) {
-                    $payment->status = 1;
+                if ($payment->pay === 0) {
+                    $payment->pay = 1;
                     $payment->save();
                 }
 
@@ -163,10 +175,10 @@ class CardController extends Controller
                 $style_class = "success";
             } else {
 
-                # save status = -1 [===0 -> first visit]
+                # save pay = -1 [===0 -> first visit]
                 # prepare error
-                if ($payment->status === 0) {
-                    $payment->status = -1;
+                if ($payment->pay === 0) {
+                    $payment->pay = -1;
                     $payment->save();
                 }
 

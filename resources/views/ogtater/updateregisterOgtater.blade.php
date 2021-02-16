@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
-    <form action="{{route('updateOgtaterForm',$data->id)}}" method="post">
+    <form action="{{route('updateregisterOgtaterForm',$data->id)}}" method="post">
         @csrf
         <div class="container">
             <div class="row">

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Webex.am - {{__('payment.doc_title') }}</title>
+    <title>Autohelp</title>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -23,8 +23,8 @@
                     <p class="card-text">{{$card_message}}</p>
                 </div>
                 <div class="d-flex justify-content-between my-1 px-1">
-                    <a href="mailto:info@webex.am" class="font-sm text-info btn">info@webex.am</a>
-                    <a href="tel:+37496101017" class="font-sm text-info btn">+374-96101017</a>
+                    {{--<a href="mailto:info@webex.am" class="font-sm text-info btn">info@webex.am</a>--}}
+                    {{--<a href="tel:+37496101017" class="font-sm text-info btn">+374-96101017</a>--}}
                 </div>
                 <div class="card-body">
                     <ul class="list-group">

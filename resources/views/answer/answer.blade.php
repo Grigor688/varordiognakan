@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card bootstrap-table">
                         <div class="card-body table-full-width">
+                            <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
                             <div class="search">
                                <span>
                                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Փնտրել ID" title="Type in a name">

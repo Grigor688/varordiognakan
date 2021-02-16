@@ -43,6 +43,27 @@
 *::after {
   box-sizing: border-box;
 }
+
+/*MEDIA*/
+
+@media (max-width: 425px) {
+  #send-mail-list{
+    width: 57% !important;
+  }
+  .messageCountintoIdram{
+    font-size: 9px;
+    position: absolute;
+    color: black;
+    left: 61px;
+    top: 113px !important;
+    padding: 4px 6px;
+    background: linear-gradient(180deg, rgba(252,217,0,1) 0%, rgba(251,196,0,1) 50%, rgba(250,174,0,1) 100%);
+    border-radius: 8px;
+  }
+  .btnclass{
+    margin-bottom: 10px;
+  }
+}
 tr th{
   font-size: 12px;
 }
@@ -80,7 +101,9 @@ td{
   background: linear-gradient(180deg, rgba(252,217,0,1) 0%, rgba(251,196,0,1) 50%, rgba(250,174,0,1) 100%);
   border-radius: 8px;
 }
-
+/*.bigdiv{*/
+  /*display: none;*/
+/*}*/
 .messageCountintoIdram{
   font-size: 9px;
   position: absolute;

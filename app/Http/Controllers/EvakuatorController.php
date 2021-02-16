@@ -100,6 +100,11 @@ class EvakuatorController extends Controller
         $spasarkum->activity = $req->input('activity');
         $spasarkum->work_day_from = $req->input('work_day_from');
         $spasarkum->work_day_to = $req->input('work_day_to');
+        $spasarkum->work_time_from = $req->input('work_time_from');
+        $spasarkum->work_time_to = $req->input('work_time_to');
+        $spasarkum->other_day = $req->input('other_day');
+        $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
+        $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
         $spasarkum->phone_number = $req->input('phone_number');
         $spasarkum->email = $req->input('email');
         $spasarkum->site = $req->input('site');
@@ -107,10 +112,13 @@ class EvakuatorController extends Controller
         $spasarkum->number_adress = $req->input('number_adress');
         $spasarkum->partner = $req->input('partner');
         $spasarkum->special_offer = $req->input('special_offer');
+        $spasarkum->special_offer_title = $req->input('special_offer_title');
         $spasarkum->special_offer_time_from = $req->input('special_offer_time_from');
         $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
         $spasarkum->orientation = $req->input('orientation');
         $spasarkum->title_orientation = $req->input('title_orientation');
+        $spasarkum->orientation_url = $req->input('orientation_url');
+        $spasarkum->special_offer_url = $req->input('special_offer_url');
         $spasarkum->lat = $req->input('lat');
         $spasarkum->lng = $req->input('lng');
 
@@ -129,6 +137,11 @@ class EvakuatorController extends Controller
             $spasarkum->activity = $req->input('activity');
             $spasarkum->work_day_from = $req->input('work_day_from');
             $spasarkum->work_day_to = $req->input('work_day_to');
+            $spasarkum->work_time_from = $req->input('work_time_from');
+            $spasarkum->work_time_to = $req->input('work_time_to');
+            $spasarkum->other_day = $req->input('other_day');
+            $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
+            $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
             $spasarkum->phone_number = $req->input('phone_number');
             $spasarkum->email = $req->input('email');
             $spasarkum->site = $req->input('site');
@@ -136,10 +149,13 @@ class EvakuatorController extends Controller
             $spasarkum->number_adress = $req->input('number_adress');
             $spasarkum->partner = $req->input('partner');
             $spasarkum->special_offer = $req->input('special_offer');
+            $spasarkum->special_offer_title = $req->input('special_offer_title');
             $spasarkum->special_offer_time_from = $req->input('special_offer_time_from');
             $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
             $spasarkum->orientation = $req->input('orientation');
             $spasarkum->title_orientation = $req->input('title_orientation');
+            $spasarkum->orientation_url = $req->input('orientation_url');
+            $spasarkum->special_offer_url = $req->input('special_offer_url');
             $spasarkum->lat = $req->input('lat');
             $spasarkum->lng = $req->input('lng');
         }

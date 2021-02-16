@@ -7,7 +7,7 @@
                     <div class="card bootstrap-table">
                         <div class="card-body table-full-width">
                             <table id="myTable" class="table">
-                                <div class="toolbar">
+                                <div class="toolbar btnclass">
                                     <a href="{{route('addForm')}}" class="nav-link">
                                         <button id="send-mail-list" class="form-control astyle">Ավելացնել</button>
                                     </a>
@@ -33,7 +33,7 @@
 
                                 </span>
                                 <thead>
-                                    <th  data-sortable="true">#</th>
+                                    <th class="disabled-sorting text-right"></th>
                                     <th class="disabled-sorting text-right"></th>
                                     <th  data-sortable="true">Անվանում</th>
                                     <th  data-sortable="true">Մասնագիտացում</th>
@@ -42,8 +42,9 @@
                                     <th  data-sortable="true">Աշխատանքի օրերը մինչև</th>
                                     <th  data-sortable="true">Աշխատանքի ժամերը սկսած</th>
                                     <th  data-sortable="true">Աշխատանքի ժամերը մինչև</th>
-                                    <th  data-sortable="true">Շաբաթ օրվա աշխ․ժամերը սկսած</th>
-                                    <th  data-sortable="true">Շաբաթ օրվա աշխ․ժամերը մինչև</th>
+                                    <th  data-sortable="true">Աշխատանքի կարճ օր</th>
+                                    <th  data-sortable="true">Կարճ օրվա աշխ․ժամերը սկսած</th>
+                                    <th  data-sortable="true">Կարճ օրվա աշխ․ժամերը մինչև</th>
                                     <th  data-sortable="true">Հեռ․համար</th>
                                     <th  data-sortable="true">Էլ․փոստ</th>
                                     <th  data-sortable="true">Վեբ կայք</th>
@@ -57,13 +58,19 @@
                                     <th  data-sortable="true">Առավելություն</th>
                                     <th  data-sortable="true">Latitude</th>
                                     <th  data-sortable="true">Longitude</th>
-                                    <th class="disabled-sorting text-right"></th>
+                                    <th  data-sortable="true">#</th>
+
                                 </thead>
                                 <tbody>
                                     @foreach($data as $element)
 
                                     <tr>
-                                    <td scope="col">{{$element->id}}</td>
+                                    <td scope="col">
+                                        @if(auth()->user()->is_admin == 1)
+                                            <a href='{{route('update', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
+                                            <a href='{{route('delete', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
+                                        @endif
+                                    </td>
                                     <td class='text-right'>
                                         <a href='{{route('serviceMap', $element->id)}}' class='btn btn-link btn-succes edit a_edit'><i class="fa fa-globe" aria-hidden="true"></i></a>
                                     </td>
@@ -74,6 +81,7 @@
                                     <td scope="col">{{$element->work_day_to}}</td>
                                     <td scope="col">{{$element->work_time_from}}</td>
                                     <td scope="col">{{$element->work_time_to}}</td>
+                                    <td scope="col">{{$element->other_day}}</td>
                                     <td scope="col">{{$element->saturday_work_time_from}}</td>
                                     <td scope="col">{{$element->saturday_work_time_to}}</td>
                                     <td scope="col">{{$element->phone_number}}</td>
@@ -83,19 +91,39 @@
                                     <td scope="col">{{$element->number_adress}}</td>
 {{--                                    <td scope="col">{{$element->getStatus($element->partner)}}</td>--}}
                                     <td scope="col">{{$element->partner}}</td>
-                                    <td scope="col">{{$element->special_offer_time_from}}</td>
-                                    <td scope="col">{{$element->special_offer_time_to}}</td>
-                                    <td scope="col">{{$element->special_offer}}</td>
-                                    <td scope="col">{{$element->title_orientation}}</td>
-                                    <td scope="col">{{$element->orientation}}</td>
+                                        @if($element->partner == 'Այո')
+                                            <td scope="col">{{$element->special_offer_time_from}}</td>
+                                        @elseif($element->partner == 'Ոչ')
+                                            <td scope="col"></td>
+                                        @endif
+
+                                        @if($element->partner == 'Այո')
+                                            <td scope="col">{{$element->special_offer_time_to}}</td>
+                                        @elseif($element->partner == 'Ոչ')
+                                            <td scope="col"></td>
+                                        @endif
+
+                                        @if($element->partner == 'Այո')
+                                            <td scope="col">{{$element->special_offer}}</td>
+                                        @elseif($element->partner == 'Ոչ')
+                                            <td scope="col"></td>
+                                        @endif
+
+                                        @if($element->partner == 'Այո')
+                                            <td scope="col">{{$element->title_orientation}}</td>
+                                        @elseif($element->partner == 'Ոչ')
+                                            <td scope="col"></td>
+                                        @endif
+
+                                        @if($element->partner == 'Այո')
+                                            <td scope="col">{{$element->orientation}}</td>
+                                        @elseif($element->partner == 'Ոչ')
+                                            <td scope="col"></td>
+                                        @endif
+
                                     <td scope="col">{{$element->lat}}</td>
                                     <td scope="col">{{$element->lng}}</td>
-                                    <td class='text-right'>
-                                        @if(auth()->user()->is_admin == 1)
-                                            <a href='{{route('update', $element->id)}}' class='edit a_edit'><i style="color: #b9a206;font-size: 17px;" class='fa fa-edit'></i></a>
-                                            <a href='{{route('delete', $element->id)}}' class='btn btn-link remove'><i class='fa fa-times iclass'></i></a>
-                                        @endif
-                                    </td>
+                                    <td class='text-right'>{{$element->id}}</td>
                                     </tr>
 
                                     @endforeach
@@ -118,7 +146,7 @@
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[25];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -156,7 +184,7 @@
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[15];
+                td = tr[i].getElementsByTagName("td")[16];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -175,7 +203,7 @@
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[16];
+                td = tr[i].getElementsByTagName("td")[17];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {

@@ -7,7 +7,7 @@
 
     <title>Admin</title>
     @yield('content4')
-    <link rel="stylesheet" href="/css/app.css?abs">
+    <link rel="stylesheet" href="/css/app.css?id=abcde">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Font Awesome Icons -->
@@ -212,6 +212,14 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Օգտատեր</p>
                                 </a>
                             </li>
+
+                            <li class="nav-item">
+                                <a href="{{route('registerogtater')}}" class="nav-link">
+                                    &nbsp;<i style="color: cornflowerblue" class="fas fa-user"></i>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Գրանցված օգտատեր</p>
+                                </a>
+                            </li>
+
                             <li class="nav-item">
                                 <a href="{{route('sos')}}" class="nav-link">
                                     <i class="nav-icon far fa-circle text-info"></i>

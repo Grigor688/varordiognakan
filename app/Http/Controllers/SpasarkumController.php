@@ -15,6 +15,7 @@ class SpasarkumController extends Controller
         ]);
     }
 
+
     public function deleteImage($id){
         Spasarkum::where(['id' => $id])->update(['image' => null]);
         return redirect()->route('update',$id);
@@ -28,7 +29,7 @@ class SpasarkumController extends Controller
     public function submit(Request $req){
 
         $validatedData = $req->validate([
-            'number_adress' => 'required|integer|unique:spasarkums',
+            'number_adress' => 'required|string|unique:spasarkums',
 
         ]);
 
@@ -40,6 +41,7 @@ class SpasarkumController extends Controller
         $spasarkum->work_day_to = $req->input('work_day_to');
         $spasarkum->work_time_from = $req->input('work_time_from');
         $spasarkum->work_time_to = $req->input('work_time_to');
+        $spasarkum->other_day = $req->input('other_day');
         $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
         $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
         $spasarkum->phone_number = $req->input('phone_number');
@@ -54,6 +56,8 @@ class SpasarkumController extends Controller
         $spasarkum->special_offer_time_to = $req->special_offer_time_to;
         $spasarkum->orientation = $req->input('orientation');
         $spasarkum->title_orientation = $req->input('title_orientation');
+        $spasarkum->orientation_url = $req->input('orientation_url');
+        $spasarkum->special_offer_url = $req->input('special_offer_url');
         $spasarkum->lat = $req->input('lat');
         $spasarkum->lng = $req->input('lng');
 
@@ -110,6 +114,12 @@ class SpasarkumController extends Controller
 
 
         public function updateForm($id, Request $req){
+            $this->validate($req, [
+                'number_adress' => 'required|string|unique:spasarkums,number_adress,'.$id,
+
+
+            ]);
+
         $spasarkum = Spasarkum::find($id);
         $spasarkum->name_company = $req->input('name_company');
         $spasarkum->name = $req->input('name');
@@ -118,6 +128,7 @@ class SpasarkumController extends Controller
         $spasarkum->work_day_to = $req->input('work_day_to');
         $spasarkum->work_time_from = $req->input('work_time_from');
         $spasarkum->work_time_to = $req->input('work_time_to');
+        $spasarkum->other_day = $req->input('other_day');
         $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
         $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
         $spasarkum->phone_number = $req->input('phone_number');
@@ -132,6 +143,8 @@ class SpasarkumController extends Controller
         $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
         $spasarkum->orientation = $req->input('orientation');
         $spasarkum->title_orientation = $req->input('title_orientation');
+        $spasarkum->orientation_url = $req->input('orientation_url');
+        $spasarkum->special_offer_url = $req->input('special_offer_url');
         $spasarkum->lat = $req->input('lat');
         $spasarkum->lng = $req->input('lng');
 
@@ -150,6 +163,7 @@ class SpasarkumController extends Controller
             }else{
 //            return $req;
 //            $spasarkum->image = "";
+//            dd($req);
             $spasarkum = Spasarkum::find($id);
             $spasarkum->name_company = $req->input('name_company');
             $spasarkum->name = $req->input('name');
@@ -158,6 +172,7 @@ class SpasarkumController extends Controller
             $spasarkum->work_day_to = $req->input('work_day_to');
             $spasarkum->work_time_from = $req->input('work_time_from');
             $spasarkum->work_time_to = $req->input('work_time_to');
+            $spasarkum->other_day = $req->input('other_day');
             $spasarkum->saturday_work_time_from = $req->input('saturday_work_time_from');
             $spasarkum->saturday_work_time_to = $req->input('saturday_work_time_to');
             $spasarkum->phone_number = $req->input('phone_number');
@@ -172,6 +187,8 @@ class SpasarkumController extends Controller
             $spasarkum->special_offer_time_to = $req->input('special_offer_time_to');
             $spasarkum->orientation = $req->input('orientation');
             $spasarkum->title_orientation = $req->input('title_orientation');
+            $spasarkum->orientation_url = $req->input('orientation_url');
+            $spasarkum->special_offer_url = $req->input('special_offer_url');
             $spasarkum->lat = $req->input('lat');
             $spasarkum->lng = $req->input('lng');
         }

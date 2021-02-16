@@ -69,11 +69,11 @@
 
                             if(data.type == 1){
                                 $(data.content).each(function(index, value){
-
                                     // create the popup
+                                    console.log("vig", value)
                                     var popup = new mapboxgl.Popup({ offset: 25 })
                                         .setHTML('<h6><u>Անուն</u> - '+value.name+'</h6>'+
-                                                '<h6><u>Հեռախոսահամար</u> - '+value.phone+'</h6>'+
+                                                '<h6><u>Հեռախոսահամար</u> - '+value.phone_number+'</h6>'+
                                                 '<h6><u>Հասցե</u> - '+value.adress+'</h6>'
                                                );
 
@@ -118,7 +118,7 @@
                                         // create the popup
                                         var popup = new mapboxgl.Popup({ offset: 25 })
                                             .setHTML('<h6>Անուն - '+value.name+'</h6>'+
-                                                '<h6>Հեռախոսահամար - '+value.phone+'</h6>'+
+                                                '<h6>Հեռախոսահամար - '+value.phone_number+'</h6>'+
                                                 '<h6>Հասցե - '+value.adress+'</h6>'
                                             );
 

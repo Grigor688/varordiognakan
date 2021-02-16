@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -8,6 +7,7 @@
                     <div class="card bootstrap-table">
                         <div class="card-body table-full-width">
                             <table id="datatables" class="table">
+                                <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
                                 @if(session('deleted'))
                                     <div class="alert sesionDivdel">
                                         {{session('deleted')}}
@@ -20,20 +20,21 @@
 
 
                                 <thead>
-                                <th  data-sortable="true">#</th>
+                                <th  data-sortable="true">ID</th>
                                 <th  data-sortable="true">Վճարային քարտ</th>
                                 <th  data-sortable="true">Թվային հասցե</th>
                                 <th  data-sortable="true">Գումար</th>
                                 <th  data-sortable="true">Ժամկետի ավարտ</th>
                                 <th  data-sortable="true">Տարբերակում</th>
                                 <th data-sortable="true">Մեկնաբանություն</th>
+                                {{--<th data-sortable="true">Վճարումներ</th>--}}
                                 <th data-sortable="true">Order Status</th>
                                 <th class="disabled-sorting text-right"></th>
                                 </thead>
                                 <tbody>
                                 @foreach($data as $element)
                                     <tr style="background-color: {{$element->getTest()}}">
-                                        <td scope="col">{{$element->id}}</td>
+                                        <td scope="col">{{$element->user_id}}</td>
                                         <td scope="col">{{$element->payment_card}}</td>
                                         <td scope="col">{{$element->number_adress}}</td>
                                         <td scope="col">{{$element->sum}}</td>
@@ -44,7 +45,8 @@
                                             <td style="color: red" scope="col">{{$element->status}}</td>
                                         @endif
                                         <td scope="col"><b>{{$element->comment}}</b> </td>
-                                        <td scope="col">{{$element->order_status}}</td>
+                                        {{--<td scope="col">{{$element->pay}}</td>--}}
+                                        <td scope="col">{{$element->pay}}</td>
                                         <td class='text-right'>
                                             <a href='{{route('updateCard', $element->id)}}' class='edit a_edit'><i style="color: inherit;font-size: 17px;" class='fas fa-eye'></i></a>
                                             @if(auth()->user()->is_admin == 1)

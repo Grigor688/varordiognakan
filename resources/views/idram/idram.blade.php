@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -8,6 +7,7 @@
                     <div class="card bootstrap-table">
                         <div class="card-body table-full-width">
                             <table id="datatables" class="table">
+                                <i onclick="goBack()" class="far fa-arrow-alt-circle-left goBack"></i>
                                 @if(session('deleted'))
                                     <div class="alert sesionDivdel">
                                         {{session('deleted')}}

@@ -17,6 +17,8 @@
                             <input type="date"  name="end_of_term" class="form-control" id="end_of_term" aria-describedby="emailHelp" value="{{$data->end_of_term}}">
                             <label for="comment">Մեկնաբանություն</label>
                             <textarea  name="comment" class="form-control" id="comment" aria-describedby="emailHelp">{{$data->comment}}</textarea>
+                            <label for="order_status">Վճարում</label>
+                            <textarea  name="pay" class="form-control" id="order_status" aria-describedby="emailHelp">{{$data->pay}}</textarea>
                         </div>
                         <button type="submit" name="send" class="btn btn-success">Փոփոխել</button>
                     </div>

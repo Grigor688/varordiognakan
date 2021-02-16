@@ -54,6 +54,10 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('deletePartner/{id}', [PartnerController::class, 'deletePartner'])->name('deletePartner');
 //OGTATER
     Route::get('ogtater', [OgtaterController::class, 'index'])->name('ogtater');
+    Route::get('registerogtater', [OgtaterController::class, 'registerogtater'])->name('registerogtater');
+    Route::get('updateregisterOgtater/{id}', [OgtaterController::class, 'updateregisterOgtater'])->name('updateregisterOgtater');
+    Route::post('updateregisterOgtaterForm/{id}', [OgtaterController::class, 'updateregisterOgtaterForm'])->name('updateregisterOgtaterForm');
+    Route::get('deleteregisterOgtater/{id}', [OgtaterController::class, 'deleteregisterOgtater'])->name('deleteregisterOgtater');
     Route::get('deleteOgtater/{id}',[OgtaterController::class, 'deleteUser'])->name('delete22');
     Route::get('updateOgtater/{id}', [OgtaterController::class, 'update'])->name('updateOgtater');
     Route::post('updateOgtaterForm/{id}', [OgtaterController::class, 'updateOgtaterForm'])->name('updateOgtaterForm');
@@ -61,21 +65,22 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('sos',[SosController::class, 'index'])->name('sos');
     Route::get('gmaps/{id}',[HomeController::class, 'gmaps'])->name('google');
     Route::get('sosGoogle/{id}',[SosController::class, 'sosGoogle'])->name('sosGoogle');
+    Route::get('deleteSosUser/{id}', [SosController::class, 'deleteSosUser'])->name('deleteSosUser');
+
 //EVAKUATOR
     Route::get('evakuator',[EvakuatorController::class, 'index'])->name('evakuator');
     Route::get('addevakuator',[EvakuatorController::class, 'addForm'])->name('addevakuator');
-    Route::post('submitEvakuator', [EvakuatorController::class, 'submitEv'])->name('submitEvakuator');
+    Route::post('submitEvakuator', [SpasarkumController::class, 'submit'])->name('submitEvakuator');
     Route::get('deleteEvakuator/{id}',[EvakuatorController::class, 'deleteEvakuator'])->name('deleteEvakuator');
     Route::get('updateEvakuator/{id}', [EvakuatorController::class, 'updateEvakuator'])->name('updateEvakuator');
     Route::post('updateEvakuatorForm/{id}', [EvakuatorController::class, 'updateEvakuatorForm'])->name('updateEvakuatorForm');
 //VULKANACUM
     Route::get('vulkanacum',[VulkanacumController::class, 'index'])->name('vulkanacum');
     Route::get('addVulkanacum',[VulkanacumController::class, 'add'])->name('addVulkanacum');
-    Route::post('submitVulkanacum', [VulkanacumController::class, 'submitVulkanacum'])->name('submitVulkanacum');
+    Route::post('submitVulkanacum', [SpasarkumController::class, 'submit'])->name('submitVulkanacum');
     Route::get('deleteVulkanacum/{id}',[VulkanacumController::class, 'deleteVulkanacum'])->name('deleteVulkanacum');
     Route::get('updateVulkanacum/{id}', [VulkanacumController::class, 'updateVulkanacum'])->name('updateVulkanacum');
     Route::post('updateVulkanacumrForm/{id}', [VulkanacumController::class, 'updateVulkanacumrForm'])->name('updateVulkanacumrForm');
-
     Route::post('postEvakuators',[HomeController::class, 'gmapsSelect'])->name('postEvakuators');
 //APPA
     Route::get('appa',[HomeController::class, 'appa'])->name('appa');
@@ -138,11 +143,16 @@ Route::group(["middleware" => "auth"], function(){
     Route::get('NewOgtaterJsonId', [AnswerController::class, 'newOgtater']);
     Route::get('createquestion/{user_id}/{title}/{question}', [AnswerController::class, 'createQuestion'])->name('createquestion');
     Route::get('getAnswer/{id}', [AnswerController::class, 'getAnswer'])->name('getAnswer');
-    Route::get('createCardPayment/{payment_card}/{number_adress}/{sum}/{end_of_term}', [CardController::class, 'createCardPayment'])->name('createCardPayment');
+    Route::get('createCardPayment/{user_id}/{payment_card}/{number_adress}/{sum}/{end_of_term}', [CardController::class, 'createCardPayment'])->name('createCardPayment');
     Route::get('/orderStatus', [CardController::class, 'orderStatus'])->name('orderStatus');
     Route::get('rulesJson', [RulesController::class, 'indexJson'])->name('rulesJson');
     Route::get('numberAdressJson/{id}', [SpasarkumJsonController::class, 'numberAdress']);
     Route::get('idramPayment/{id}', [PaymentController::class, 'numberAdressJsson']);
+    Route::get('getCard/{id}', [CardController::class, 'getCard']);
+    Route::get('updateOgtater', [OgtaterController::class, 'updateOgtater']);
+    Route::get('addOgtater', [OgtaterController::class, 'addOgtater'])->name('addOgtater');
+    Route::get('ogtatergetId/{id}', [OgtaterController::class, 'ogtatergetId']);
+    Route::get('addSosUser/{user_id}/{type}/{phone_number}/{lat}/{lng}', [SosController::class, 'addSosUser'])->name('addSosUser');
 
     //IDRAM
     Route::get('payment/success', [\App\Http\Controllers\PaymentController::class, 'success']);

@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Ogtater;
 use App\Models\Evakuator;
+use App\Models\Spasarkum;
 use App\Models\Vulkanacum;
 use App\Models\Appa;
+use App\Models\Sos;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
@@ -20,9 +22,9 @@ class HomeController extends Controller
      */
     public function gmaps($id)
     {
-        $ogtId = new Ogtater();
+        $ogtId = new Sos();
         return view('gmaps',[
-            'evakuator'=> Evakuator::all(),
+//            'evakuator'=> Evakuator::all(),
             'data' => $ogtId->find($id)
         ]);
     }
@@ -30,7 +32,7 @@ class HomeController extends Controller
     public function gmapsSelect()
     {
        if ($_POST['value'] == 1){
-            $service = Evakuator::all();
+            $service = Spasarkum::where(['name' => 'Էվակուատոր'])->get();
            $data = [
                'type' => 1,
                'content' => $service
@@ -38,7 +40,7 @@ class HomeController extends Controller
            return json_encode($data);
 
        }elseif ($_POST['value'] == 2){
-           $service = Vulkanacum::all();
+           $service = Spasarkum::where(['name' => 'Վուլկանացում'])->get();
            $data = [
                'type' => 1,
                'content' => $service

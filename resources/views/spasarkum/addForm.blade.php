@@ -30,25 +30,25 @@
                         <div class="form-group">
                             <label for="name">Մասնագիտացում</label>
                             <select name="name" id="name" class="form-control">
+                                <option>Ավտոմասերի խանութ</option>
                                 <option>Էվակուատոր</option>
                                 <option>Շարժական Վուլկանացում</option>
                                 <option>Ավտոլվացում</option>
                                 <option>Վուլկանացում </option>
                                 <option>Լվա ինքդ</option>
                                 <option>Յուղման կետ</option>
-                                <option>Ավտոտեխսպասարկման կետ</option>
+                                <option>Ավտոտեխսպասարկում</option>
                                 <option>Էլեկտրիկ</option>
-                                <option>Մատորիստ</option>
-                                <option>Խադավիկ</option>
-                                <option>Դզող-փչող</option>
-                                <option>Գազավիկ</option>
-                                <option>Պլաստմասե իրերի վերանորգում</option>
+                                <option>Շարժիչի մասնագետ (Моторист)</option>
+                                <option>Ընթացագործ (Ходовик)</option>
+                                <option>Թիթեղագործ-ներկարար</option>
+                                <option>Գազաբալոնային մասնագետ</option>
                                 <option>Մեքենաների քանդման կետեր</option>
                                 <option>Ռադիատորի վերանորոգում</option>
-                                <option>Կոնդիցիոների լիցքավորում</option>
-                                <option>Մեքենայի կերամիկապատում/փայլեցում</option>
+                                <option>Անվաբացքի ուղղում (Развал)</option>
+                                <option>Մեքենաների կերամիկապատում-փայլեցում</option>
                                 <option>Ապակիների թաղանթապատում</option>
-                                <option>Սրահի վերանորոգում/քիմ մաքրում</option>
+                                <option>Սրահի վերանորոգում-քիմ մաքրում</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -78,11 +78,11 @@
                         </div>
                         <div class="form-group">
                             <label for="lat">Լատիտուդ</label>
-                            <input type="text"  name="lat" class="form-control" id="lat" aria-describedby="emailHelp" placeholder="Գրեք լատիտուդե հասցեն">
+                            <input type="text"  name="lat" class="form-control" id="lat" aria-describedby="emailHelp" placeholder="Գրեք լատիտուդե հասցեն" required>
                         </div>
                         <div class="form-group">
                             <label for="lng">Լոնգիտուդ</label>
-                            <input type="text" name="lng" class="form-control" id="lng" aria-describedby="emailHelp" placeholder="Գրեք լոնգիտուդե հասցեն">
+                            <input type="text" name="lng" class="form-control" id="lng" aria-describedby="emailHelp" placeholder="Գրեք լոնգիտուդե հասցեն" required>
                         </div>
                         <div class="form-group">
                             <label for="partner">Գործընկեր</label>
@@ -97,6 +97,7 @@
                         <div class="form-group">
                             <label for="work_day_from">Աշխատանքային օրեր սկսած</label>
                             <select name="work_day_from" id="work_day_from" class="form-control">
+                                <option></option>
                                 <option>Երկուշաբթի</option>
                                 <option>Երեքշաբթի</option>
                                 <option>Չորեքշաբթի</option>
@@ -110,6 +111,7 @@
                         <div class="form-group">
                             <label for="work_day_to">Աշխատանքային օրեր մինչև</label>
                             <select name="work_day_to" id="work_day_to" class="form-control">
+                                <option></option>
                                 <option>Երկուշաբթի</option>
                                 <option>Երեքշաբթի</option>
                                 <option>Չորեքշաբթի</option>
@@ -127,46 +129,67 @@
                             <input type="time" name="work_time_to" class="form-control" id="work_time_to" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group" style="margin-bottom: -3px">
-                            <label for="addDay">Ավելացնել շաբաթ օրվա աշխատաժամեր</label>
+                            <label for="addDay">Ավելացնել կարճ օր և աշխատաժամեր</label>
                         </div>
                         <div class="form-group">
                             <span id="addDay" class="addDay">+</span>
                         </div>
                         <div id="hiddenSaturdayForm" class="form-group">
+                            <label for="other_day" style="color: #a2865f">Կարճ օր</label>
+                            <select name="other_day" id="other_day" class="form-control">
+                                <option></option>
+                                <option>Երկուշաբթի</option>
+                                <option>Երեքշաբթի</option>
+                                <option>Չորեքշաբթի</option>
+                                <option>Հինգշաբթի</option>
+                                <option>Ուրբաթ</option>
+                                <option>Շաբաթ</option>
+                                <option>Կիրակի</option>
+                            </select>
                             <label for="saturday_work_time_from" style="color: #a2865f">Աշխատանքային ժամեր սկսած</label>
                             <input type="time" name="saturday_work_time_from" class="form-control" id="saturday_work_time_from" aria-describedby="emailHelp">
                             <label for="saturday_work_time_to" style="color: #a2865f">Աշխատանքային ժամեր մինչև</label>
                             <input type="time" name="saturday_work_time_to" class="form-control" id="saturday_work_time_to" aria-describedby="emailHelp">
                         </div>
 
-                        <div class="form-group">
-                            <h5>Հատուկ առաջարկ</h5>
-                            <label style="color: #a2865f">Հատուկ առաջարկի վերնագիր</label>
-                            <input type="text" name="special_offer_title" class="form-control" placeholder="Գրեք հատուկ առաջարկի վերնագիր">
-                            <br>
-                            <input type="file" name="special_offer_image" class="form-control changeInput">
-                            <label style="color: #a2865f">Հատուկ առաջարկ</label>
-                            <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
-                            <br>
-                            <label for ="special_offer_time_from" style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
-                            <input type="datetime-local" value="{{date('Y-m-d\TH:i:s',strtotime(date("Y-m-d\TH:i:s") . "+1 days"))}}" id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_from">
-                            <br>
-                            <label for ="special_offer_time_to" style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
-                            <input type="datetime-local" value="{{date('Y-m-d\TH:i:s',strtotime(date("Y-m-d\TH:i:s") . "+1 days"))}}" id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_to">
-                        </div>
-                        <div class="thumbnail">
-                            <label>Առավելություն</label>
-                            <div class="caption">
-                                <input type="file" name="image" class="form-control changeInput">
+                            <div class="form-group">
+                                <h5>Հատուկ առաջարկ</h5>
+                                <label style="color: #a2865f">URL հասցե</label>
                                 <br>
-                                <label style="color: #a2865f">Առավելության վերնագիր</label>
-                                <input type="text" name="title_orientation" class="form-control changeInput" placeholder="Գրեք առավելության վերնագիրը">
+                                <textarea  name="special_offer_url" class="form-control changeInput" id="special_offer_url" aria-describedby="emailHelp" placeholder="Գրեք URL-հասցե"></textarea>
                                 <br>
-                                <label style="color: #a2865f">Բովանդակություն</label>
-                                <textarea  name="orientation" class="form-control changeInput" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք առավելությունը"></textarea>
+                                <label style="color: #a2865f">Հատուկ առաջարկի վերնագիր</label>
+                                <input type="text" name="special_offer_title" class="form-control changeInput" placeholder="Գրեք հատուկ առաջարկի վերնագիր">
+                                <br>
+                                <input type="file" name="special_offer_image" class="form-control changeInput">
+                                <label style="color: #a2865f">Հատուկ առաջարկ</label>
+                                <textarea  name="special_offer" class="form-control changeInput" id="special_offer" aria-describedby="emailHelp" placeholder="Գրեք հատուկ առաջարկը"></textarea>
+                                <br>
+                                <label for ="special_offer_time_from" style="color: #a2865f">Հատուկ առաջարկի սկիզբ</label>
+                                <input type="datetime-local"  id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_from">
+                                <br>
+                                <label for ="special_offer_time_to" style="color: #a2865f">Հատուկ առաջարկի ավարտ</label>
+                                <input type="datetime-local"  id="special_offer_time_from" class="form-control changeInput" name="special_offer_time_to">
                             </div>
-                        </div>
+                            <div class="thumbnail">
+                                <label>Առավելություն</label>
+                                <div class="caption">
+                                    <label style="color: #a2865f">URL հասցե</label>
+                                    <br>
+                                    <textarea  name="orientation_url" class="form-control changeInput" id="orientation_url" aria-describedby="emailHelp" placeholder="Գրեք URL-հասցե"></textarea>
+                                    <br>
+                                    <input type="file" name="image" class="form-control changeInput">
+                                    <br>
+                                    <label style="color: #a2865f">Առավելության վերնագիր</label>
+                                    <input type="text" name="title_orientation" class="form-control changeInput" placeholder="Գրեք առավելության վերնագիրը">
+                                    <br>
+                                    <label style="color: #a2865f">Բովանդակություն</label>
+                                    <textarea  name="orientation" class="form-control changeInput" id="orientation" aria-describedby="emailHelp" placeholder="Գրեք առավելությունը"></textarea>
+                                </div>
+                            </div>
+
                         <br>
+
                         <button type="submit" name="send" class="btn btn-success">Ավելացնել</button>
                     </div>
                 </div>

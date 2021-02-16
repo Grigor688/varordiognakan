@@ -38,7 +38,7 @@
             });
 
             var popupLoc = new mapboxgl.Popup({ offset: 25 })
-                .setHTML('<h6>Ձեր գտնվելու վայրը</h6>');
+                .setHTML('<h6>Սպասարկման կետի հասցե</h6>');
 
             var marker = new mapboxgl.Marker()
                 .setLngLat([{{ $data->lng }}, {{ $data->lat }}])
